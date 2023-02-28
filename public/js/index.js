@@ -1,147 +1,80 @@
-// const submitbtn = document.getElementById('submitcomment');
-// console.log("ji");
-//  submitbtn.addEventListener("click",function(event){
-// const useremail = document.getElementById('title').value;
 
-//     const message = document.getElementById('comment').value;
-
-//     event.preventDefault();
-//     console.log("ko");
-//     console.log(useremail, message);
-
-//     Email.send({
-//     Host : "smtp.elasticemail.com",
-//     Username : "gymhomies1234@gmail.com",
-//     Password : "5BACC0A66B18ECD81D1D1CAF56C951AE2C6F",
-//     To : 'tayudope@mailgolem.com',
-//     From : "gymhomies1234@gmail.com",
-//     Subject : "This is the subject",
-//     Body : `<!DOCTYPE html>
-//     <html>
-//       <head>
-//         <title>Confirmation of Car Ride Appointment</title>
-//         <link rel="preconnect" href="https://fonts.googleapis.com">
-// <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-// <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&display=swap" rel="stylesheet">
-//         <style>
-//         body {
-//           margin: 0;
-//           padding: 0;
-//           font-family: Arial, sans-serif;
-//         }
-//         .container {
-//           margin: 20px auto;
-//           padding: 20px;
-//           max-width: 600px;
-//           background-color: rgba(255, 255, 255, 0.8);
-//           border-radius: 10px;
-//           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-//         }
-//         h1, h2 {
-//           color: #fff;
-//           text-align: center;
-//           margin-top: 0;
-//         }
-//         h2 {
-//           font-size: 1.5em;
-//           margin-bottom: 20px;
-//         }
-//         table {
-//           width: 100%;
-//           border-collapse: collapse;
-//           margin-bottom: 20px;
-//         }
-//         th {
-//           font-weight: normal;
-//           text-align: left;
-//           padding: 10px 0;
-//           width: 40%;
-//           vertical-align: top;
-//         }
-//         td {
-//           padding: 10px 0;
-//           width: 60%;
-//           vertical-align: top;
-//         }
-//         .button-container {
-//           text-align: center;
-//           margin-top: 20px;
-//         }
-//         .button {
-//           display: inline-block;
-//           background-color: #007bff;
-//           color: #fff;
-//           text-decoration: none;
-//           padding: 10px 20px;
-//           border-radius: 5px;
-//         }
-//         </style>
-//       </head>
-//       <body>
-//         <div class="container">
-//           <div class="image-container"> <span style="font-family: 'Great Vibes', cursive; position: absolute; color: rgb(255, 255, 255);font-size: 30px; right: 40%;"> Thomson Team Car Service </span>
-//             <img src="https://wallpapercave.com/wp/wp1955348.jpg" alt="Limo" class="limo-image" style="max-height: 400px; width: 100%; overflow: hidden;">
-//           </div>
-//           <h1>Confirmation of Car Ride Appointment</h1>
-//           <p>Dear [Client Name],</p>
-//           <p>Dear [Client Name],
-//             <br>
-//             We are delighted to confirm your upcoming car ride with Thomson Team Car Service, the premier car service in town. Our team of professional chauffeurs is dedicated to providing you with a luxurious and comfortable ride to your destination.
-//             <br>
-//             At Thomson Team Car Service, we pride ourselves on offering the highest quality of service and exceeding our clients' expectations. We are committed to making your experience with us as smooth and enjoyable as possible.
-//             <br>
-//             Thank you for choosing Thomson Team Car Service for your transportation needs. We look forward to serving you and providing you with an exceptional experience.</p>
-//           <table>
-//             <tr>
-//               <th>Date</th>
-//               <td>[Date of Appointment]</td>
-//             </tr>
-//             <tr>
-//               <th>Time</th>
-//               <td>[Time of Appointment]</td>
-//             </tr>
-//             <tr>
-//               <th>Pick-up location</th>
-//               <td>[Pick-up Address]</td>
-//             </tr>
-//             <tr>
-//               <th>Drop-off location</th>
-//               <td>[Drop-off Address]</td>
-//             </tr>
-//             <tr>
-//               <th>Car type</th>
-//               <td>[Type of Car]</td>
-//             </tr>
-//             <tr>
-//             <th>Passengers</th>
-//             <td>[Number of Passengers]</td>
-//           </tr>
-//           <tr>
-//             <th>Special requests</th>
-//             <td>[Special Requests]</td>
-//           </tr>
-//           <tr>
-//             <th>Price</th>
-//             <td>[Price of Car Ride]</td>
-//           </tr>
-//         </table>
-//         <p>If you need to make any changes to your reservation, please contact us as soon as possible so we can make the necessary adjustments.</p>
-//         // <p>To confirm your appointment, please click the button below:</p>
-//         // <div class="button-container">
-//         //   <a href="[Link to Confirm Appointment]" class="button">Confirm Appointment</a>
-//         // </div>
-//         <p>Thank you for choosing Thomson Team Car Service. We look forward to providing you with a top-notch car ride experience.</p>
-//         <p>Best regards,</p>
-//         <p>The Thomson Team Car Service Team</p>
-//       </div>
-      
-//     `
-// }).then(
-//   message => alert(message)
-// );
-//  })
+const lis = document.querySelectorAll("li");
+const lbs = document.querySelectorAll(".lb");
+const ul = document.querySelector("ul");
+const lineDash = document.querySelector(".line-dash");
 
 
+var dashOrigin = -35; //pixels
+var selectedLi = -35; //pixels
+var speed = 500; //move this many pixels in one second.
+var distance = 0;
+var time = 0;
+
+// initial animation and class for HOME
+TweenLite.to(lbs[0], 0.6, {
+					y: -43,
+					ease: Bounce.easeOut,
+					delay: 1
+				});
+
+lis[0].classList.add("active");
+
+//push all the bottom lines down.
+function pushDownLb() {
+	for(let k = 0; k < lbs.length; ++k)
+		TweenLite.to(lbs[k], 0.5, {
+					y: 0,
+					ease:  Power3.easeOut
+				});
+}
+
+ul.addEventListener(
+	"mouseleave",
+	function(e) {
+		// to avoid a bug in chrome that sometimes triggers mouseleave on click
+		// and the relatedTarget comes up null
+		if (e.relatedTarget) {
+			distance = Math.abs(dashOrigin - selectedLi);
+			time = distance / speed;
+			dashOrigin = selectedLi;
+			if (time) {
+				// overlaping tweens would give a zero time
+				TweenLite.to(lineDash, time, {
+					strokeDashoffset: selectedLi,
+					ease: Bounce.easeOut
+				});
+			} //if
+		} //if
+	},
+	false
+);
+
+for (let i = 0; i < 4; ++i) {
+	lis[i].addEventListener("mouseover", function() {
+		distance = Math.abs(-250 * i - 35 - dashOrigin);
+		time = distance / speed;
+		dashOrigin = -250 * i - 35;
+		if (time) {
+			TweenLite.to(lineDash, time, {
+				strokeDashoffset: -250 * i - 35,
+				ease: Bounce.easeOut
+			});
+		} //if
+	});
+
+	lis[i].addEventListener("click", function() {
+		selectedLi = -250 * i - 35;
+		pushDownLb();
+		let current = document.getElementsByClassName("active");
+		current[0].classList.remove("active");
+		lis[i].classList.add("active");
+		TweenLite.to(lbs[i], 0.5, {
+					y: -43,
+					ease: Bounce.easeOut
+				});
+	});
+}
  function validateForm() {
   
     const firstName = document.querySelector('#first-name').value.trim();
@@ -161,6 +94,9 @@
         errorMessages.push('First name is required');
         const firstName = document.querySelector('#first-name');
         firstName.classList = "form-control is-invalid";
+    }else{
+        const firstName = document.querySelector('#first-name')
+        firstName.classList = "form-control is-valid";
     }
 
     if (!lastName) {
@@ -180,7 +116,11 @@
         const email = document.querySelector('#email')
         errorMessages.push('Email is invalid');
         email.classList = "form-control is-invalid"
+    }else{
+        const email = document.querySelector('#email')
+        email.classList = "form-control is-valid";
     }
+
 
     if (!phone) {
         errorMessages.push('Phone number is required');
@@ -190,30 +130,46 @@
         errorMessages.push('Phone number is invalid');
         const phone = document.querySelector('#phone');
         phone.classList = "form-control is-invalid"
+    }else{
+        const phone = document.querySelector('#phone')
+        phone.classList = "form-control is-valid";
     }
 
     if (!time) {
         errorMessages.push('Date and time of appointment is required');
         const time = document.querySelector('#appointment-time')
         time.classList = "form-control is-invalid"
+    }else{
+        const time = document.querySelector('#appointment-time')
+        time.classList = "form-control is-valid";
     }
     if (!date) {
         errorMessages.push('Date and time of appointment is required');
         const date = document.querySelector('#appointment-date')
         date.classList = "form-control is-invalid"
+    }else{
+        const date = document.querySelector('#appointment-date')
+        date.classList = "form-control is-valid";
     }
 
     if (!pickUp) {
         errorMessages.push('Pick up location is required');
         const pickUp = document.querySelector('#pick-up')
         pickUp.classList = "form-control is-invalid"
+    }else{
+        const pickUp = document.querySelector('#pick-up')
+        pickUp.classList = "form-control is-valid";
     }
 
     if (!dropOff) {
         errorMessages.push('Drop off location is required');
         const dropOff = document.querySelector('#drop-off')
         dropOff.classList = "form-control is-invalid"
+    } else{
+        const dropOff = document.querySelector('#drop-off')
+        dropOff.classList = "form-control is-valid";
     }
+
 
     if (!passengers) {
         errorMessages.push('Number of passengers is required');
@@ -223,7 +179,11 @@
         errorMessages.push('Number of passengers should be between 1 and 10');
         const passengers = document.querySelector('#passengers')
         passengers.classList = "form-control is-invalid"
+    }else{
+        const passengers = document.querySelector('#passengers')
+        passengers.classList = "form-control is-valid";
     }
+
 
     if (errorMessages.length > 0) {
         // showErrors(errorMessages);
