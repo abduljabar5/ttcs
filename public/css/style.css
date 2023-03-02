@@ -28,9 +28,10 @@ body{
 }
 .maintext{
     position: absolute;
-    top: 20%;
+    top: -250px;
     left: 35%;
     color: white;
+    background-color: transparent;
 }
 .navbar{
     background-color: transparent;
@@ -187,6 +188,7 @@ label {
     z-index: 1;
   }
   .cardform {
+    position: relative;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -194,6 +196,7 @@ label {
     width: 80%;
     max-width: 600px;
     margin: auto;
+    margin-top: auto;
   }
   
   .card-body {
@@ -251,8 +254,30 @@ label {
     z-index: 32;
     
 }
-
-
+.formmap{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#map{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 15px 15px 0px 0px;
+    padding: 220px;
+    padding-bottom: 90%;
+    margin-top: 80px;
+}
+.mapcontainer{
+    display: flex;
+    flex-direction: column;
+}
+.mapcontext{
+    background-color: white;
+    border-radius: 0px 0px 15px 15px;
+    padding: 45px 0px;
+    display: none;
+}
 .content {
 	width: 100%;
 	height: calc(100% - 75px);
@@ -264,6 +289,32 @@ label {
 	flex-direction: column;
 	background-color: #9387ab;
 }
+/* price info */
+
+  h2 {
+    margin: 0;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin: 5px 0;
+  }
+  .distance {
+    color: #666;
+
+  }
+  .price {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .time{
+    color: #666;
+    font-size: 1.2em;
+  }
+  /* price <-- */
 h1 {
 	letter-spacing: 4px;
 	padding: 1em;
@@ -274,7 +325,7 @@ h1 {
 
 svg.line-top {
 	width: 100%;
-	background-color: rgb(0, 0, 34);
+	background-color: transparent;
 }
 svg.line-bottom {
 	width: 100%;
@@ -320,7 +371,16 @@ polygon {
 	stroke: orange;
 	fill: orange;
 }
-
+.phonenum :visited{
+    color: white;
+}
+.phonenum {
+    color: white;
+    text-decoration: none;
+}
+.phonenum:hover{
+    color: gold;
+}
 @media (max-device-width: 991px) {
 	.header {
 		height: 64px;

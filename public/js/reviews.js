@@ -52,7 +52,7 @@ const lineDash = document.querySelector(".line-dash");
 
 
 var dashOrigin = -35; //pixels
-var selectedLi = -35; //pixels
+var selectedLi = -785; //pixels
 var speed = 500; //move this many pixels in one second.
 var distance = 0;
 var time = 0;

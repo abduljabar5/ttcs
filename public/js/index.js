@@ -5,20 +5,20 @@ const ul = document.querySelector("ul");
 const lineDash = document.querySelector(".line-dash");
 
 
-var dashOrigin = -35; //pixels
-var selectedLi = -35; //pixels
+var dashOrigin = -283; //pixels
+var selectedLi = -283; //pixels
 var speed = 500; //move this many pixels in one second.
 var distance = 0;
 var time = 0;
 
 // initial animation and class for HOME
-TweenLite.to(lbs[0], 0.6, {
+TweenLite.to(lbs[1], 0.6, {
 					y: -43,
 					ease: Bounce.easeOut,
 					delay: 1
 				});
 
-lis[0].classList.add("active");
+lis[1].classList.add("active");
 
 //push all the bottom lines down.
 function pushDownLb() {
@@ -74,6 +74,13 @@ for (let i = 0; i < 4; ++i) {
 					ease: Bounce.easeOut
 				});
 	});
+}
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+if(menuBtn){
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
 }
  function validateForm() {
   
