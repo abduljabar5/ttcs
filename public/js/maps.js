@@ -51,10 +51,10 @@ function initMap() {
       const price = document.getElementById('price');
       const mapcontexts = document.getElementById('mapcontexts')
         console.log(response);
-        console.log(parseInt(response.rows[0].elements[0].distance.text) * 6);
+        console.log(parseInt(response.rows[0].elements[0].distance.text) * 5);
         mapcontexts.style.display = "block";
         distance.textContent=response.rows[0].elements[0].distance.text
-        price.textContent = "$" + (parseInt(response.rows[0].elements[0].distance.text) * 6);
+        price.textContent = "$" + (parseInt(response.rows[0].elements[0].distance.text) * 5);
         travletime.textContent=response.rows[0].elements[0].duration.text
         //   document.getElementById("response").innerText = JSON.stringify(
         //     response,
