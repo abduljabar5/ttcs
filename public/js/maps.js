@@ -12,6 +12,7 @@
 //   inputs.forEach(function(input) {
 //     initializeAutocomplete(input);
 //   });
+
   
 function initMap() {
     const bounds = new google.maps.LatLngBounds();
@@ -50,12 +51,47 @@ function initMap() {
       const travletime = document.getElementById('traveltime');
       const price = document.getElementById('price');
       const mapcontexts = document.getElementById('mapcontexts')
+      const firstName = document.querySelector('#first-name').value.trim();
+    const lastName = document.querySelector('#last-name').value.trim();
+    const useremail = document.querySelector('#email').value.trim();
+    const phone = document.querySelector('#phone').value.trim();
+    const time = document.querySelector('#appointment-time').value.trim();
+    const date = document.querySelector('#appointment-date').value.trim();
+    const pickUp = document.querySelector('#pick-up').value.trim();
+    const dropOff = document.querySelector('#drop-off').value.trim();
+    const passengers = document.querySelector('#passengers').value.trim();
+    const specialRequests = document.querySelector('#special-requests').value.trim();
+    const confirmdate =document.getElementById('confirmdate')
+    const confirmtime =document.getElementById('confirmtime');
+    const confirmpickup = document.getElementById('confirmpickup');
+    const confirmdropoff = document.getElementById('confirmdropoff');
+    const confirmlength =document.getElementById('confirmlength');
+    const confirmprice = document.getElementById('confirmprice');
+    const confirmpassengers = document.getElementById('confirmpassengers');
+    const confirmspecial = document.getElementById('confirmspecial');
         console.log(response);
-        console.log(parseInt(response.rows[0].elements[0].distance.text) * 5);
+        console.log(parseFloat(response.rows[0].elements[0].distance.text) * 5);
         mapcontexts.style.display = "block";
         distance.textContent=response.rows[0].elements[0].distance.text
-        price.textContent = "$" + (parseInt(response.rows[0].elements[0].distance.text) * 5);
+        const test = parseFloat(response.rows[0].elements[0].distance.text)
+        if (test < 12){
+            price.textContent = "$55"
+            confirmprice.textContent = "$55"
+            console.log(test);
+            console.log(true);  
+        }else{
+            console.log(false);
+        price.textContent = "$" + (parseFloat(response.rows[0].elements[0].distance.text) * 5);
+        confirmprice.textContent = "$" + (parseFloat(response.rows[0].elements[0].distance.text) * 5);
+        }
         travletime.textContent=response.rows[0].elements[0].duration.text
+        confirmdate.textContent =" " + date
+        confirmtime.textContent = " " + time
+        confirmpickup.textContent = " " + pickUp
+        confirmdropoff.textContent = " " + dropOff
+        confirmlength.textContent = " " + response.rows[0].elements[0].duration.text
+        confirmpassengers.textContent = " " + passengers
+        confirmspecial.textContent =  " " + specialRequests
         //   document.getElementById("response").innerText = JSON.stringify(
         //     response,
         //     null,

@@ -1,4 +1,4 @@
-body {
+/* body {
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@ body {
 	-webkit-box-shadow: #333 1px 3px 4px;
 	-moz-box-shadow: #333 1px 3px 4px;
 	box-shadow: #333 1px 3px 4px;
-    /* position: fixed; */
+
     z-index: 32;
     
 }
@@ -100,7 +100,7 @@ polygon {
 		height: calc(100% - 64px);
 	}
 }
-/* main */
+
 main {
     padding: 50px 20px;
     }
@@ -236,4 +236,181 @@ main {
         margin: 0 10px;
         cursor: pointer;
       }
+       */
+       body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
       
+      .header {
+        width: 100%;
+        height: 75px;
+        background:transparent;
+          backdrop-filter: blur(5px);
+        opacity: 0.95;
+        overflow: hidden;
+        -webkit-box-shadow: #333 1px 3px 4px;
+        -moz-box-shadow: #333 1px 3px 4px;
+        box-shadow: #333 1px 3px 4px;
+          /* position: fixed; */
+      
+          
+      }
+      
+      
+      .content {
+        width: 100%;
+        height: calc(100% - 75px);
+        background-image: url(https://picsum.photos/1000/700);
+        background-size: cover;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #9387ab;
+      }
+      h1 {
+        letter-spacing: 4px;
+        padding: 1em;
+        color: white;
+        background-color: rgb(0, 0, 34);
+        opacity: 0.8;
+      }
+      
+      svg.line-top {
+        width: 100%;
+        background-color: rgb(0, 0, 34);
+      }
+      svg.line-bottom {
+        width: 100%;
+      }
+      .menu {
+        width: 750px;
+        margin: 0 auto;
+      }
+      .menu ul {
+        padding: 0;
+        margin: 0;
+      }
+      
+      .menu ul li {
+        margin: 0;
+        padding: 10px 0 10px 0;
+        width: 25%;
+        height: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: rgb(80, 80, 80);
+        cursor: pointer;
+        display: inline-block;
+        letter-spacing: 3.5px;
+        transition: all 0.5s ease-out;
+      }
+      .menu li a :visited{
+          color: rgb(80, 80, 80);
+      }
+      .menu li a {
+          color: rgb(80, 80, 80);
+          text-decoration: none;
+      }
+      
+      .menu li.active {
+        color: orange;
+        transform: scale(1.1);
+      }
+      
+      polygon {
+        stroke-width: 2px;
+        stroke: orange;
+        fill: orange;
+      }
+      
+      @media (max-device-width: 991px) {
+        .header {
+          height: 64px;
+        }
+      
+        body {
+          font-size: 0.4em;
+        }
+        .content {
+          height: calc(100% - 64px);
+        }
+      }
+       .card {
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .additional-card {
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        position: fixed;
+        right: -320px;
+        top: 0;
+        transition: right 0.5s ease-in-out;
+      }
+      
+      .show {
+        right: 0;
+      }
+      .formmap{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #map{
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        padding-bottom: 90%;
+    }
+    .mapcontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .mapcontext{
+        background-color: white;
+        border-radius: 0px 0px 15px 15px;
+        padding: 45px 0px;
+        display: none;
+    }
+    .content {
+      width: 100%;
+      height: calc(100% - 75px);
+      background-image: url(https://picsum.photos/1000/700);
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #9387ab;
+    }
+    .phonenum :visited{
+      color: #9387ab;
+  }
+  .phonenum {
+      color: #9387ab;
+      font-family: Gruppo;
+      text-decoration: none;
+      font-size: larger;
+  }
+  .phonenum:hover{
+      color: rgb(0, 0, 0);
+  }
+   tr{
+    display: flex;
+   }
+    @media (max-width: 622px) {
+      .navwords{
+        display: none;
+      }
+    }

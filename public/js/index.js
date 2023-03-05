@@ -239,7 +239,8 @@ function  submitForm(){
     form.reset();
     document.location.replace('homepage.html')
      }
-   
+     const submit = document.getElementById('submit');
+
 submit.addEventListener("click",function(event){
      event.preventDefault();
      console.log("jo");
