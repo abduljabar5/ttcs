@@ -1,4 +1,8 @@
-/* body {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+body {
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
@@ -14,23 +18,16 @@
 	-webkit-box-shadow: #333 1px 3px 4px;
 	-moz-box-shadow: #333 1px 3px 4px;
 	box-shadow: #333 1px 3px 4px;
-
+    /* position: fixed; */
     z-index: 32;
     
 }
 
-
-.content {
-	width: 100%;
-	height: calc(100% - 75px);
-	background-image: url(https://picsum.photos/2100/2100);
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	background-color: #9387ab;
+.carousel-inner{
+  border-radius: 15px;
+  max-height: 582px;
 }
+
 h1 {
 	letter-spacing: 4px;
 	padding: 1em;
@@ -100,317 +97,241 @@ polygon {
 		height: calc(100% - 64px);
 	}
 }
+  
+  main {
+  padding: 50px 20px;
+  }
+  
+  .hero {
+  background-image: url('hero.jpg');
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  }
+  
+  .hero h1 {
+  font-size: 48px;
+  text-align: center;
+  }
+  
+  .content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  height: 1400px;
+  }
+  
+  .content h2 {
+  font-size: 36px;
+  margin-top: 0;
+  }
+  
+  .content p {
+  font-size: 18px;
+  line-height: 1.5;
+  }
+  
+  .content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 550px;
+  }
+  
+  .content li {
+  margin-bottom: 10px;
+  }
+  
+  
+  
+  footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  }
+  
+  footer p {
+  font-size: 14px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+  nav ul {
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  nav li {
+  margin-left: 0;
+  margin-bottom: 10px;
+  }
+  
+  .logo img {
+  height: 40px;
+  }
+  
+  .hero h1 {
+  font-size: 36px;
+  }
+  
+  .content h2 {
+  font-size: 24px;
+  }
+  
+  .content p {
+  font-size: 16px;
+  }
+  
+  .content li strong {
+  display: block;
+  width: auto;
+  margin-bottom: 5px;
+  }
+  }
+/* .carousel-item{
+  top: -250px;
+  z-index: -2;
+} */
 
-main {
-    padding: 50px 20px;
-    }
-    
-    .hero {
-    background-image: url('hero.jpg');
-    height: 400px;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    }
-    
-    .hero h1 {
-    font-size: 48px;
-    text-align: center;
-    }
-    
-    .content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 50px;
-    }
-    
-    .content h2 {
-    font-size: 36px;
-    margin-top: 0;
-    }
-    
-    .content p {
-    font-size: 18px;
-    line-height: 1.5;
-    }
-    
-    .content ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    }
-    
-    .content li {
-    margin-bottom: 10px;
-    }
-    
-    .content li strong {
-    display: inline-block;
-    width: 120px;
-    }
-    
-    footer {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    }
-    
-    footer p {
-    font-size: 14px;
-    }
-    
-    @media only screen and (max-width: 768px) {
-    nav ul {
-    flex-direction: column;
-    align-items: center;
-    }
-    
-    nav li {
-    margin-left: 0;
-    margin-bottom: 10px;
-    }
-    
-    .logo img {
-    height: 40px;
-    }
-    
-    .hero h1 {
-    font-size: 36px;
-    }
-    
-    .content h2 {
-    font-size: 24px;
-    }
-    
-    .content p {
-    font-size: 16px;
-    }
-    
-    .content li strong {
+.secone{
+  transform: translateX(-50%);
+}
+.sectwo{
+  transform: translateX(50%);
+  max-width: 800px;
+}
+.show{
+  opacity: 1;
+  transition: 3s;
+  transform: translateX(0%);
+}
+.hide{
+  opacity: 0;
+}
+.card-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.card {
+  background-color: transparent;
+  border-color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+animation: myAnim;
+animation-duration: 2s;
+animation-delay: 1s;
+opacity: 0;
+animation-fill-mode: forwards;
+width: 330px;
+height: 200px;
+}
+.card2 {
+  background-color: transparent;
+  border-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+animation: myAnim;
+animation-duration: 2s;
+animation-delay: 2s;
+opacity: 0;
+animation-fill-mode: forwards;
+width: 330px;
+height: 200px;
+}
+.card3 {
+  background-color: transparent;
+  border-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+animation: myAnim ;
+animation-duration: 2s;
+animation-delay: 4s;
+opacity: 0;
+animation-fill-mode: forwards;
+width: 330px;
+height: 200px;
+
+}
+.card4 {
+
+  background-color: transparent;
+  border-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+animation: myAnim forwards;
+animation-duration: 2s;
+animation-delay: 6s;
+opacity: 0;
+animation-fill-mode: forwards;
+width: 330px;
+height: 200px;
+
+}
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
     display: block;
-    width: auto;
-    margin-bottom: 5px;
-    }
-    }
-    .slideshow {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 50px;
-        text-align: center;
-      }
-      
-      .slideshow-container {
-        position: relative;
-      }
-      
-      .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-      }
-      
-      .slide.active {
-        opacity: 1;
-      }
-      
-      .slide img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-      
-      .slideshow-controls {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      
-      .slideshow-control {
-        margin: 0 10px;
-        cursor: pointer;
-      }
-       */
-       body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-      
-      .header {
-        width: 100%;
-        height: 75px;
-        background:transparent;
-          backdrop-filter: blur(5px);
-        opacity: 0.95;
-        overflow: hidden;
-        -webkit-box-shadow: #333 1px 3px 4px;
-        -moz-box-shadow: #333 1px 3px 4px;
-        box-shadow: #333 1px 3px 4px;
-          /* position: fixed; */
-      
-          
-      }
-      
-      
-      .content {
-        width: 100%;
-        height: calc(100% - 75px);
-        background-image: url(https://picsum.photos/1000/700);
-        background-size: cover;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #9387ab;
-      }
-      h1 {
-        letter-spacing: 4px;
-        padding: 1em;
-        color: white;
-        background-color: rgb(0, 0, 34);
-        opacity: 0.8;
-      }
-      
-      svg.line-top {
-        width: 100%;
-        background-color: rgb(0, 0, 34);
-      }
-      svg.line-bottom {
-        width: 100%;
-      }
-      .menu {
-        width: 750px;
-        margin: 0 auto;
-      }
-      .menu ul {
-        padding: 0;
-        margin: 0;
-      }
-      
-      .menu ul li {
-        margin: 0;
-        padding: 10px 0 10px 0;
-        width: 25%;
-        height: 10px;
-        text-align: center;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: rgb(80, 80, 80);
-        cursor: pointer;
-        display: inline-block;
-        letter-spacing: 3.5px;
-        transition: all 0.5s ease-out;
-      }
-      .menu li a :visited{
-          color: rgb(80, 80, 80);
-      }
-      .menu li a {
-          color: rgb(80, 80, 80);
-          text-decoration: none;
-      }
-      
-      .menu li.active {
-        color: orange;
-        transform: scale(1.1);
-      }
-      
-      polygon {
-        stroke-width: 2px;
-        stroke: orange;
-        fill: orange;
-      }
-      
-      @media (max-device-width: 991px) {
-        .header {
-          height: 64px;
-        }
-      
-        body {
-          font-size: 0.4em;
-        }
-        .content {
-          height: calc(100% - 64px);
-        }
-      }
-       .card {
-        width: 300px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        padding: 20px;
-        margin-bottom: 20px;
-      }
-      
-      .additional-card {
-        width: 300px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        padding: 20px;
-        margin-bottom: 20px;
-        position: fixed;
-        right: -320px;
-        top: 0;
-        transition: right 0.5s ease-in-out;
-      }
-      
-      .show {
-        right: 0;
-      }
-      .formmap{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    #map{
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-        padding-bottom: 90%;
-    }
-    .mapcontainer{
-        display: flex;
-        flex-direction: column;
-    }
-    .mapcontext{
-        background-color: white;
-        border-radius: 0px 0px 15px 15px;
-        padding: 45px 0px;
-        display: none;
-    }
-    .content {
-      width: 100%;
-      height: calc(100% - 75px);
-      background-image: url(https://picsum.photos/1000/700);
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background-color: #9387ab;
-    }
-    .phonenum :visited{
-      color: #9387ab;
-  }
-  .phonenum {
-      color: #9387ab;
-      font-family: Gruppo;
-      text-decoration: none;
-      font-size: larger;
-  }
-  .phonenum:hover{
-      color: rgb(0, 0, 0);
-  }
-   tr{
-    display: flex;
-   }
-    @media (max-width: 622px) {
-      .navwords{
-        display: none;
-      }
-    }
+		opacity: 0;
+		transform: scale(7);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: scale(1.5);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: scale(1.24);
+	}
+
+	89% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: scale(1.04);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+    opacity: 1;
+	}
+
+}
+.bolder{
+  margin: 10px;
+}

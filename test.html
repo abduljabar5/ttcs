@@ -14,44 +14,51 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="form-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
-                    <div class="form-container">
-                        <div class="left-content">
-                            <h3 class="title">Site Name</h3>
-                            <h4 class="sub-title">Lorem ipsum dolor sit amet.</h4>
-                        </div>
-                        <div class="right-content">
-                            <h3 class="form-title">Login</h3>
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                <label>Username / Email</label>
-                                    <input type="email" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                <label>Password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <button class="btn signin">Login</button>
-                                <div class="remember-me">
-                                    <input type="checkbox" class="checkbox">
-                                    <span class="check-label">Remember Me</span>
-                                </div>
-                                <a href="" class="forgot">Forgot Password</a>
-                            </form>
-                            <span class="separator">OR</span>
-                            <ul class="social-links">
-                                <li><a href=""><i class="fab fa-google"></i> Login with Google</a></li>
-                                <li><a href=""><i class="fab fa-facebook-f"></i> Login with Facebook</a></li>
-                            </ul>
-                            <span class="signup-link">Don't have an account? Sign up <a href="">here</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="formbold-form-confirm">
+        <h4 class="mx-auto">
+          Please feel free to contact us at your convenience with any inquiries you may have by calling our dedicated line at <br> <a class="phonenum" href="tel:(612)-999-5382" > +1 (612)-999-5382 </a>.
+        </h4>
+
+        <div>
+          <table class="mx-auto">
+            <tr>
+              <th>Date:</th>
+              <td id="confirmdate">${date}</td>
+            </tr>
+            <tr>
+              <th>Time:</th>
+              <td id="confirmtime">${time}</td>
+            </tr>
+            <tr>
+              <th>Pick-up location:</th>
+              <td id="confirmpickup">${pickUp}</td>
+            </tr>
+            <tr>
+              <th>Drop-off location:</th>
+              <td id="confirmdropoff">${dropOff}</td>
+            </tr>
+            <tr>
+              <th>Car type:</th>
+              <td>2018 Lincoln MKX</td>
+            </tr>
+            <tr>
+            <th>Passengers:</th>
+            <td id="confirmpassengers">${passengers}</td>
+          </tr>
+          <tr>
+            <th>Special requests:</th>
+            <td id="confirmspecial">${specialRequests}</td>
+          </tr>
+          <tr>
+            <th>Ride Length:</th>
+            <td id="confirmlength">1min</td>
+          </tr>
+          <tr>
+            <th>Price:</th>
+            <td id="confirmprice">$60 <small><cite style="color: gray;">*Estimate</cite></small> </td>
+          </tr>
+        </table>
         </div>
-    </div>
-</body>
+      </div>
+    </body>
 </html>

@@ -17,8 +17,8 @@ function addReview(name, rating, comment) {
 
   const reviewContent = document.createElement('div');
   reviewContent.innerHTML = `
-    <h2>${stars}</h2>
     <p>${comment}</p>
+    <h2 class="stars">${stars}</h2>
   `;
 
   newReview.appendChild(reviewContent);
@@ -38,6 +38,7 @@ const submitreview = document.getElementById('submitreview');
     const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
      reviews.push({ name, rating, comment });
   localStorage.setItem('reviews', JSON.stringify(reviews));
+  document.location.replace('reviews.html')
   })
 function displayReviews() {
   const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
