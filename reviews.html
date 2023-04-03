@@ -1,246 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Gruppo&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="public/css/review.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Gruppo&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/review.css">
+  <link rel="stylesheet" href="public/css/test.css">
   <title>Document</title>
 </head>
+
 <body>
-  <header>
-    <div class="header fixed-top">
-      <div class="menu">
-        <svg class="line-top" width="0" height="15" viewbox="0,0 1000,20">
-          <line
-            class="line-dash"
-            x1="0"
-            y1="15"
-            x2="1000"
-            y2="15"
-            style="stroke: orange; stroke-width:2; stroke-linecap:round; stroke-dasharray: 180,1200; stroke-dashoffset: -785;"
-          />
-        </svg>
-        
-       <ul>
-        <li><a href="index.html">Home</a></li><li><a href="form.html">BookOnline</a></li><li><a href="about.html">About</a></li><li><a href="reviews.html">Reviews</a></li>
-       </ul>
-       <svg class="line-bottom" width="750" height="30" viewbox="0,0 1000,40">
-        <polygon class="lb" points="35,53 115,53 125,43 135,53 215,53" />
-        <polygon class="lb" points="285,53 365,53 375,43 385,53 465,53" />
-     
-        <polygon class="lb" points="535,53 615,53 625,43 635,53 715,53" />
-     
-        <polygon class="lb" points="785,53 865,53 875,43 885,53 965,53" />
-       </svg>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index2.html"><img
+          src="https://static.vecteezy.com/system/resources/previews/009/121/835/non_2x/ttc-logo-ttc-letter-ttc-letter-logo-design-initials-ttc-logo-linked-with-circle-and-uppercase-monogram-logo-ttc-typography-for-technology-business-and-real-estate-brand-vector.jpg"
+          alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+        aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" id="nav" href="form.html">Book Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light disabled" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light active" href="reviews.html">Reviews</a>
+          </li>
+        </ul>
       </div>
-     </div>
-     
-  </header>
-
-  <main>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Add Review
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel"> <h2>Add a Review</h2></h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <section class="comment-form">
-         
-          <form>
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="rating">Rating:</label>
-              <select id="rating" class="form-control" required>
-                <option value="">Select a rating</option>
-                <option value="1">&#9733;</option>
-                <option value="2">&#9733;&#9733;</option>
-                <option value="3">&#9733;&#9733;&#9733;</option>
-                <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
-                <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="comment">Comment:</label>
-              <textarea id="comment" rows="5" class="form-control" required></textarea>
-            </div>
-            
-          </form>
-        </section>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="submitreview">Understood</button>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavLabel">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="navbar-nav">
+        <a class="nav-link text-center active" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link text-center" href="form.html">Book Now</a>
+        <a class="nav-link text-center" href="about.html">About Us</a>
+        <a class="nav-link text-center disabled" href="#">Pricing</a>
+        <a class="nav-link text-center" href="reviews.html">Reviews</a>
+        <div class="custom-separator mx-auto bg-primary"></div>
       </div>
     </div>
   </div>
-</div>
-<section class="reviews">
-          <h2>Customer Reviews</h2>
-          <div id="reviews-list"></div>
-        </section>
-		<section class="review">
-			<h2>Great Service!</h2>
-			<p>Thomson Team Car Service provided excellent service. The staff was friendly and professional. They fixed my car quickly and it runs perfectly now. I highly recommend this company!</p>
-			<div class="rating">
-				<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-				<span class="score">4.0</span>
-			</div>
-			<div class="reviewer">
-				<p>Reviewed by Jane Doe on June 15, 2022</p>
-			</div>
-		</section>
 
-		<section class="review">
-			<h2>Highly Recommended!</h2>
-			<p>I had an amazing experience with Thomson Team Car Service. The staff was very professional and they did a great job on my car. I would highly recommend this company to anyone looking for quality car service.</p>
-			<div class="rating">
-				<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-				<span class="score">5.0</span>
-			</div>
-			<div class="reviewer">
-				<p>Reviewed by John Smith on May 10, 2022</p>
-			</div>
-		</section>
+  <main>
+    <!-- Button trigger modal -->
+    <a role="button" id="newreviewbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <img src="public/css/images/addicon.svg" alt="">
+    </a>
 
-		<section class="review">
-			<h2>Excellent Work!</h2>
-			<p>Thomson Team Car Service did an excellent job fixing my car. They were very knowledgeable and friendly. I would definitely recommend this company to anyone in need of car repairs.</p>
-			<div class="rating">
-				<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-				<span class="score">5.0</span>
-			</div>
-			<div class="reviewer">
-				<p>Reviewed by Sarah Johnson on April 2, 2022</p>
-			</div>
-		</section>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <h2>Add a Review</h2>
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <section class="comment-form">
+
+              <form>
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="rating">Rating:</label>
+                  <select id="rating" class="form-control" required>
+                    <option value="">Select a rating</option>
+                    <option value="1">&#9733;</option>
+                    <option value="2">&#9733;&#9733;</option>
+                    <option value="3">&#9733;&#9733;&#9733;</option>
+                    <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+                    <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="comment">Comment:</label>
+                  <textarea id="comment" rows="5" class="form-control" required></textarea>
+                </div>
+
+              </form>
+            </section>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="submitreview">Add Review</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="reviews">
+      <h2 class="text-light text-center m-4">Customer Reviews</h2>
+      <div id="reviews-list"></div>
+    </section>
+    <section class="review">
+      <h2>Great Service!</h2>
+      <p>Thomson Team Car Service provided excellent service. The staff was friendly and professional. They fixed my car
+        quickly and it runs perfectly now. I highly recommend this company!</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+        <span class="score">4.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Jane Doe on June 15, 2022</p>
+      </div>
+    </section>
 
     <section class="review">
-			<h2>Excellent Service</h2>
-			<p>I had an amazing experience with Luxury Transportation. The driver was very professional and courteous, and the car was clean and comfortable. I would highly recommend this company to anyone looking for a luxury transportation service.</p>
-			<div class="rating">
-				<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-				<span class="score">5.0</span>
-			</div>
-			<div class="reviewer">
-				<p>Reviewed by Sarah Thompson on February 1, 2023</p>
-			</div>
-		</section>
+      <h2>Highly Recommended!</h2>
+      <p>I had an amazing experience with Thomson Team Car Service. The staff was very professional and they did a great
+        job on my car. I would highly recommend this company to anyone looking for quality car service.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by John Smith on May 10, 2022</p>
+      </div>
+    </section>
 
-		<section class="review">
-			<h2>Top Notch Service</h2>
-			<p>My experience with Luxury Transportation was exceptional. The driver was prompt and professional, and the car was immaculate. The ride was smooth and comfortable, and I arrived at my destination feeling refreshed and relaxed. I highly recommend this company to anyone in need of luxury transportation.</p>
-			<div class="rating">
-				<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-				<span class="score">4.0</span>
-			</div>
-			<div class="reviewer">
-				<p>Reviewed by John Williams on January 22, 2023</p>
-			</div>
-		</section>
+    <section class="review">
+      <h2>Excellent Work!</h2>
+      <p>Thomson Team Car Service did an excellent job fixing my car. They were very knowledgeable and friendly. I would
+        definitely recommend this company to anyone in need of car repairs.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Sarah Johnson on April 2, 2022</p>
+      </div>
+    </section>
 
-		<section class="review">
-			<h2>Exceptional Experience</h2>
-			<p>I recently used Luxury Transportation for a business trip, and I was extremely impressed with their service. The driver was knowledgeable and professional, and the car was top-notch. I arrived at my meetings feeling relaxed and ready to go. I highly recommend this company to anyone looking for a luxury transportation service.</p>
-			<div class="rating">
-				<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-				<span class="score">5.0</span>
-			</div>
-			<div class="reviewer">
-				<p>Reviewed by David Lee on January 15, 2023</p>
-			</div>
-		</section>
+    <section class="review">
+      <h2>Excellent Service</h2>
+      <p>I had an amazing experience with Luxury Transportation. The driver was very professional and courteous, and the
+        car was clean and comfortable. I would highly recommend this company to anyone looking for a luxury
+        transportation service.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Sarah Thompson on February 1, 2023</p>
+      </div>
+    </section>
 
-	<section class="review">
-		<h2>Amazing Service</h2>
-		<p>I had an amazing experience with Luxury Transportation. The driver was very friendly and helpful, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. I highly recommend this company to anyone looking for a luxury transportation service.</p>
-		<div class="rating">
-			<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-			<span class="score">5.0</span>
-		</div>
-		<div class="reviewer">
-			<p>Reviewed by Michael Johnson on January 5, 2023</p>
-		</div>
-	</section>
-  <section class="review">
-    <h2>Great Service</h2>
-    <p>Luxury Transportation provided great service for my wedding. The driver was on time and professional, and the car was beautiful. The ride was smooth and comfortable, and we arrived at the wedding venue feeling relaxed and ready to go. I highly recommend this company to anyone in need of luxury transportation for their special events.</p>
-    <div class="rating">
-      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-      <span class="score">4.0</span>
-    </div>
-    <div class="reviewer">
-			<p>Reviewed by Emily Brown on January 10, 2023</p>
-		</div>
-	</section>
+    <section class="review">
+      <h2>Top Notch Service</h2>
+      <p>My experience with Luxury Transportation was exceptional. The driver was prompt and professional, and the car
+        was immaculate. The ride was smooth and comfortable, and I arrived at my destination feeling refreshed and
+        relaxed. I highly recommend this company to anyone in need of luxury transportation.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+        <span class="score">4.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by John Williams on January 22, 2023</p>
+      </div>
+    </section>
+
+    <section class="review">
+      <h2>Exceptional Experience</h2>
+      <p>I recently used Luxury Transportation for a business trip, and I was extremely impressed with their service.
+        The driver was knowledgeable and professional, and the car was top-notch. I arrived at my meetings feeling
+        relaxed and ready to go. I highly recommend this company to anyone looking for a luxury transportation service.
+      </p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by David Lee on January 15, 2023</p>
+      </div>
+    </section>
+
+    <section class="review">
+      <h2>Amazing Service</h2>
+      <p>I had an amazing experience with Luxury Transportation. The driver was very friendly and helpful, and the car
+        was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling
+        relaxed and refreshed. I highly recommend this company to anyone looking for a luxury transportation service.
+      </p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Michael Johnson on January 5, 2023</p>
+      </div>
+    </section>
+    <section class="review">
+      <h2>Great Service</h2>
+      <p>Luxury Transportation provided great service for my wedding. The driver was on time and professional, and the
+        car was beautiful. The ride was smooth and comfortable, and we arrived at the wedding venue feeling relaxed and
+        ready to go. I highly recommend this company to anyone in need of luxury transportation for their special
+        events.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+        <span class="score">4.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Emily Brown on January 10, 2023</p>
+      </div>
+    </section>
 
 
-	<section class="review">
-		<h2>Exceptional Service</h2>
-		<p>My experience with Luxury Transportation was exceptional. The driver was professional and courteous, and the car was clean and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling refreshed and relaxed. I highly recommend this company to anyone looking for a luxury transportation service.</p>
-		<div class="rating">
-			<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-			<span class="score">5.0</span>
-		</div>
-		<div class="reviewer">
-			<p>Reviewed by Lisa Taylor on December 30, 2022</p>
-		</div>
-	</section>
+    <section class="review">
+      <h2>Exceptional Service</h2>
+      <p>My experience with Luxury Transportation was exceptional. The driver was professional and courteous, and the
+        car was clean and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling
+        refreshed and relaxed. I highly recommend this company to anyone looking for a luxury transportation service.
+      </p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Lisa Taylor on December 30, 2022</p>
+      </div>
+    </section>
 
-	<section class="review">
-		<h2>Excellent Experience</h2>
-		<p>I had an excellent experience with Luxury Transportation. The driver was very professional and knowledgeable, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling refreshed and relaxed. I highly recommend this company to anyone looking for a luxury transportation service.</p>
-		<div class="rating">
-			<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-			<span class="score">5.0</span>
-		</div>
-		<div class="reviewer">
-			<p>Reviewed by James Davis on December 25, 2022</p>
-		</div>
-	</section>
+    <section class="review">
+      <h2>Excellent Experience</h2>
+      <p>I had an excellent experience with Luxury Transportation. The driver was very professional and knowledgeable,
+        and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my
+        destination feeling refreshed and relaxed. I highly recommend this company to anyone looking for a luxury
+        transportation service.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by James Davis on December 25, 2022</p>
+      </div>
+    </section>
 
-	<section class="review">
-		<h2>Great Service</h2>
-		<p>Luxury Transportation provided great service for my airport transfer. The driver was on time and professional, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at the airport feeling relaxed and refreshed. I highly recommend this company to anyone in need of luxury transportation for their airport transfers.</p>
-		<div class="rating">
-			<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-			<span class="score">5.0</span>
-		</div>
-		<div class="reviewer">
-			<p>Reviewed by Olivia Jackson on December 20, 2022</p>
-		</div>
-	</section>
+    <section class="review">
+      <h2>Great Service</h2>
+      <p>Luxury Transportation provided great service for my airport transfer. The driver was on time and professional,
+        and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at the airport
+        feeling relaxed and refreshed. I highly recommend this company to anyone in need of luxury transportation for
+        their airport transfers.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Olivia Jackson on December 20, 2022</p>
+      </div>
+    </section>
 
-	<section class="review">
-		<h2>Excellent Service</h2>
-		<p>My experience with Luxury Transportation was excellent. The driver was very professional and courteous, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. The customer service was also exceptional, with the staff going above and beyond to ensure that all of my needs were met. I highly recommend this company to anyone looking for a luxury transportation service.</p>
-    <div class="rating">
-    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-    <span class="score">5.0</span>
-    </div>
-    <div class="reviewer">
-    <p>Reviewed by Sarah Lee on December 15, 2022</p>
-    </div>
+    <section class="review">
+      <h2>Excellent Service</h2>
+      <p>My experience with Luxury Transportation was excellent. The driver was very professional and courteous, and the
+        car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination
+        feeling relaxed and refreshed. The customer service was also exceptional, with the staff going above and beyond
+        to ensure that all of my needs were met. I highly recommend this company to anyone looking for a luxury
+        transportation service.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Sarah Lee on December 15, 2022</p>
+      </div>
     </section>
 
     <section class="review">
       <h2>Outstanding Service</h2>
-      <p>Luxury Transportation provided outstanding service for my wedding day. The driver arrived on time and was very professional and courteous, and the car was beautifully decorated and very luxurious. The ride was smooth and enjoyable, and we arrived at the wedding venue feeling relaxed and excited. I highly recommend this company for any special event transportation needs.</p>
+      <p>Luxury Transportation provided outstanding service for my wedding day. The driver arrived on time and was very
+        professional and courteous, and the car was beautifully decorated and very luxurious. The ride was smooth and
+        enjoyable, and we arrived at the wedding venue feeling relaxed and excited. I highly recommend this company for
+        any special event transportation needs.</p>
       <div class="rating">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="score">5.0</span>
@@ -249,10 +306,13 @@
         <p>Reviewed by Rachel Smith on December 10, 2022</p>
       </div>
     </section>
-  
+
     <section class="review">
       <h2>Highly Recommend</h2>
-      <p>I highly recommend Luxury Transportation for anyone looking for a reliable and luxurious transportation service. The driver was very professional and courteous, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. Overall, a great experience.</p>
+      <p>I highly recommend Luxury Transportation for anyone looking for a reliable and luxurious transportation
+        service. The driver was very professional and courteous, and the car was very luxurious and comfortable. The
+        ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. Overall, a great
+        experience.</p>
       <div class="rating">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="score">5.0</span>
@@ -261,10 +321,13 @@
         <p>Reviewed by David Johnson on December 5, 2022</p>
       </div>
     </section>
-  
+
     <section class="review">
       <h2>Great Customer Service</h2>
-      <p>The customer service provided by Luxury Transportation was excellent. The staff was very friendly and helpful, and they went above and beyond to ensure that all of my transportation needs were met. The driver was also very professional and courteous, and the car was very luxurious and comfortable. I highly recommend this company to anyone in need of luxury transportation services.</p>
+      <p>The customer service provided by Luxury Transportation was excellent. The staff was very friendly and helpful,
+        and they went above and beyond to ensure that all of my transportation needs were met. The driver was also very
+        professional and courteous, and the car was very luxurious and comfortable. I highly recommend this company to
+        anyone in need of luxury transportation services.</p>
       <div class="rating">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <span class="score">5.0</span>
@@ -273,79 +336,102 @@
         <p>Reviewed by Elizabeth Jones on December 1, 2022</p>
       </div>
     </section>
-  
+
     <section class="review">
       <h2>Excellent Company</h2>
-      <p>Luxury Transportation is an excellent company that provides top-notch transportation services. The driver was very professional and courteous, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. I highly recommend this company to anyone in need of luxury transportation services.</p>
+      <p>Luxury Transportation is an excellent company that provides top-notch transportation services. The driver was
+        very professional and courteous, and the car was very luxurious and comfortable. The ride was smooth and
+        enjoyable, and I arrived at my destination feeling relaxed and refreshed. I highly recommend this company to
+        anyone in need of luxury transportation services.</p>
       <div class="rating">
         <span class="stars">&#9733;&#9733;&#9733;★</span>
         <span class="score">4.5</span>
-        </div>
-        <div class="reviewer">
+      </div>
+      <div class="reviewer">
         <p>Reviewed by John Doe on November 27, 2022</p>
-        </div>
-        </section>
+      </div>
+    </section>
 
-      	<section class="review">
-          <h2>Great Experience</h2>
-          <p>I had a great experience with Luxury Transportation. The driver was very professional and courteous, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. I would definitely use this company again in the future.</p>
-          <div class="rating">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span class="score">5.0</span>
-          </div>
-          <div class="reviewer">
-            <p>Reviewed by Jane Smith on November 22, 2022</p>
-          </div>
-        </section>
-      
-        <section class="review">
-          <h2>Amazing Service</h2>
-          <p>The service provided by Luxury Transportation was amazing. The driver was very professional and courteous, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. I would definitely use this company again in the future.</p>
-          <div class="rating">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span class="score">5.0</span>
-          </div>
-          <div class="reviewer">
-            <p>Reviewed by Mike Johnson on November 17, 2022</p>
-          </div>
-        </section>
-      
-        <section class="review">
-          <h2>Top-Notch Service</h2>
-          <p>The service provided by Luxury Transportation was top-notch. The driver was very professional and courteous, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. I would highly recommend this company to anyone in need of luxury transportation services.</p>
-          <div class="rating">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span class="score">5.0</span>
-          </div>
-          <div class="reviewer">
-            <p>Reviewed by Emily Brown on November 12, 2022</p>
-          </div>
-        </section>
-      
-        <section class="review">
-          <h2>Excellent Experience</h2>
-          <p>I had an excellent experience with Luxury Transportation. The driver was very professional and courteous, and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination feeling relaxed and refreshed. I would definitely use this company again in the future.</p>
-          <div class="rating">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span class="score">5.0</span>
-          </div>
-          <div class="reviewer">
-            <p>Reviewed by James Wilson on November 7, 2022</p>
-          </div>
-        </section>
-      
-  
-	</main>
- 
- 
+    <section class="review">
+      <h2>Great Experience</h2>
+      <p>I had a great experience with Luxury Transportation. The driver was very professional and courteous, and the
+        car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination
+        feeling relaxed and refreshed. I would definitely use this company again in the future.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Jane Smith on November 22, 2022</p>
+      </div>
+    </section>
 
-	<footer>
-		<p>&copy; 2023 Thomson Team Car Service. All rights reserved.</p>
-	</footer>
+    <section class="review">
+      <h2>Amazing Service</h2>
+      <p>The service provided by Luxury Transportation was amazing. The driver was very professional and courteous, and
+        the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination
+        feeling relaxed and refreshed. I would definitely use this company again in the future.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Mike Johnson on November 17, 2022</p>
+      </div>
+    </section>
 
+    <section class="review">
+      <h2>Top-Notch Service</h2>
+      <p>The service provided by Luxury Transportation was top-notch. The driver was very professional and courteous,
+        and the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my
+        destination feeling relaxed and refreshed. I would highly recommend this company to anyone in need of luxury
+        transportation services.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by Emily Brown on November 12, 2022</p>
+      </div>
+    </section>
+
+    <section class="review">
+      <h2>Excellent Experience</h2>
+      <p>I had an excellent experience with Luxury Transportation. The driver was very professional and courteous, and
+        the car was very luxurious and comfortable. The ride was smooth and enjoyable, and I arrived at my destination
+        feeling relaxed and refreshed. I would definitely use this company again in the future.</p>
+      <div class="rating">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="score">5.0</span>
+      </div>
+      <div class="reviewer">
+        <p>Reviewed by James Wilson on November 7, 2022</p>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <footer class="footer bg-black small text-center text-white-50">
+    <p>&copy; 2023 Thomson Team Car Service. All rights reserved.</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+    crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
   <script src="https://smtpjs.com/v3/smtp.js">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-  <script src="public/js/reviews.js"></script></body>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnA__D7we39j6KjrIAvAnff9Kj5PicuhE&libraries=places"></script>
+
+  <script src="public/js/nav.js"></script>
+  <script src="public/js/reviews.js"></script>
+</body>
+
 </html>

@@ -8,75 +8,59 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/form.css">
+    <link rel="stylesheet" href="public/css/test.css">
+
     <title>TTCS</title>
 </head>
-<body style="background-color: rgb(152, 152, 152);">
+<body>
   <header>
-    <style>
-     @media (min-width: 750px) {
- 
-  .navagations{
-    display: none;
-  }
-}
-      @media (max-width: 750px) {
-  .header {
-    display: none;
-  }
-  .navagations{
-    display: block;
-    position: relative;
-  }
-}
-    </style>
-    <div class="header">
-      <div class="menu">
-       <svg class="line-top" width="0" height="15" viewbox="0,0 1000,20">
-        <line
-         class="line-dash"
-         x1="0"
-         y1="15"
-         x2="1000"
-         y2="15"
-         style="stroke: orange; stroke-width:2; stroke-linecap:round; stroke-dasharray: 180,1200; stroke-dashoffset: -283;"
-        />
-       </svg>
-       <ul>
-        <li><a href="index.html">Home</a></li><li><a href="form.html">BookOnline</a></li><li><a href="about.html">About</a></li><li><a href="reviews.html">Reviews</a></li>
-       </ul>
-       <svg class="line-bottom" width="750" height="30" viewbox="0,0 1000,40">
-        <polygon class="lb" points="35,53 115,53 125,43 135,53 215,53" />
-        <polygon class="lb" points="285,53 365,53 375,43 385,53 465,53" />
-     
-        <polygon class="lb" points="535,53 615,53 625,43 635,53 715,53" />
-     
-        <polygon class="lb" points="785,53 865,53 875,43 885,53 965,53" />
-       </svg>
-      </div>
-     </div>
-     <!-- mobile navbar -->
-     <nav class="navagations navbar navbar-expand-md navbar-dark fixed-top">
-      <a class="navbar-brand" href="#">Your Logo</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+   
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="https://static.vecteezy.com/system/resources/previews/009/121/835/non_2x/ttc-logo-ttc-letter-ttc-letter-logo-design-initials-ttc-logo-linked-with-circle-and-uppercase-monogram-logo-ttc-typography-for-technology-business-and-real-estate-brand-vector.jpg" alt=""></a>
+        <button class="navbar-toggler" id="navbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+        aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <img src="public/css/images/6137866_format_remove_tab_text_edit_icon.svg" alt=""> -->
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav">
-          <li class="nav-item m-2">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item m-2">
-            <a class="nav-link" href="form.html">BookOnline</a>
-          </li>
-          <li class="nav-item m-2">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item m-2">
-            <a class="nav-link" href="reviews.html">Reviews</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light active" id="nav" href="form.html">Book Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light disabled" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light " href="reviews.html">Reviews</a>
+            </li>
+          </ul>
+        </div>
+ </div>
+</nav>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasNavLabel">Menu</h5>
+  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body">
+  <div class="navbar-nav">
+    <a class="nav-link text-center active" aria-current="page" href="index.html">Home</a>
+    <a class="nav-link text-center" href="form.html">Book Now</a>
+      <div class="custom-separator mx-auto bg-primary"></div>
+    <a class="nav-link text-center" href="about.html">About Us</a>
+    <a class="nav-link text-center disabled" href="#">Pricing</a>
+    <a class="nav-link text-center" href="reviews.html">Reviews</a>
+</div>
+</div>
+</div>
   <!-- end of mobile navbar -->
      </head>
   <div class="formbold-main-wrapper">
@@ -94,7 +78,7 @@
                   </li>
                   <li class="formbold-step-menu3">
                       <span class="num">3</span>
-                      <span class="navwords">Confirm</span> 
+                      <span class="navwords">Confirmation</span> 
                   </li>
               </ul>
           </div>
@@ -102,19 +86,19 @@
           <div class="formbold-form-step-1 active">
             <div class="formbold-input-flex">
               <div>
-                <input class="firstname form-control" type="text" id="first-name" name="first-name" placeholder="First Name" required >
+                <input class="firstname form-control" type="text" id="first-name" name="first-name" value="nn" placeholder="First Name" required >
               </div>
               <div>
-                <input class="form-control" type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                <input class="form-control" type="text" id="last-name" name="last-name" placeholder="Last Name" value="nn" required>
               </div>
             </div>
     
             <div class="formbold-input-flex">
                 <div>
-                  <input class="form-control" type="email" id="email" name="email" placeholder="Email" required>
+                  <input class="form-control" type="email" id="email" name="email" value="a@gmail.com" placeholder="Email" required>
                 </div>
                 <div>
-                  <input class="form-control" type="tel" id="phone" name="phone" placeholder="Cell"required >
+                  <input class="form-control" type="tel" id="phone" name="phone" value="6128367123" placeholder="Cell"required >
                 </div>
             </div>
             <div class="formbold-input-flex date-time">
@@ -127,19 +111,45 @@
             </div>
           </div>
           <div class="formbold-input-flex">
-          <div>
-            <input  type="text" class="autocomplete form-control" placeholder="Enter an address" id="pick-up" name="pick-up" required>
+          <div class="pickupgroup">
+            <input  type="text" class="autocomplete form-control" list="datalistOptions"  placeholder="Enter an address" id="pick-up" name="pick-up" required>
+            <datalist id="datalistOptions">
+              <option value="Mall of America 2, 60 East Broadway, Bloomington, MN 55425, USA">
+              <option value="Minneapolis / St Paul Airport (MSP) Terminal 1, 4300 Glumack Dr, St Paul, MN 55111">
+              <option value="1300 Nicollet Mall, Minneapolis, MN 55403">
+            </datalist>
+            <a id="locationButton">
+              <img src="public/css/images/location.svg">
+            </a>
+            <div id="loader" class="text-center">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+
         </div>
       </div>
       <div class="formbold-input-flex">
       <div>
-        <input  type="text" class="autocomplete form-control" placeholder="Enter an address" id="drop-off" name="drop-off" required>
+        <input  type="text" class="autocomplete form-control" list="datalistOptions"  placeholder="Enter an address" id="drop-off" name="drop-off" required>
+        <datalist id="datalistOptions">
+          <option value="Mall of America 2, 60 East Broadway, Bloomington, MN 55425, USA">
+          <option value="Minneapolis / St Paul Airport (MSP) Terminal 1, 4300 Glumack Dr, St Paul, MN 55111">
+          <option value="1300 Nicollet Mall, Minneapolis, MN 55403">
+        </datalist>
     </div>
   </div>
   <div class="formbold-input-flex">
   <div>
     <input class="form-control" type="number" id="passengers" name="passengers" min="1" max="10" placeholder="Passengers" value="1" required>
 </div>
+<select class="form-select" id="form" aria-label="Default select example" placeholder="Select a Service" required>
+  <option selected disabled hidden>Select Service</option>
+  <option  value="1">Taxi</option>
+  <option value="2">Town Car</option>
+  <option value="3">Limousine</option>
+</select>
+
 </div>
 <div>
   <label class="t" for="special-requests">Special Requests</label>
@@ -150,16 +160,24 @@
             <div class="mapcontainer mx-auto">
               <div id="map"></div>
               <div  class="mapcontext text-center" id="mapcontexts">
-                <h2>Ride Estimates</h2>
-                <ul>
-                  <li ><span class="distance">Distance:</span><br> <span id="distance"></span></li>
-                  <li><span class="time">Time:</span><br> <span id="traveltime"></span></li>
-                  <li><span class="price">Price:</span><br> <span id="price"></span></li>
-                </ul>
+                <h1>Ride Estimates</h1>
+                <div class="estimateBox">
+                <div class="text-center rideestimates" style="padding: 0px;">
+                  <h5 class="distance">Distance:</h6>
+                  <p id="distance"></p>
+                </div>
+                <div>
+                  <h5 class="time">Time:</h6>
+                  <p id="traveltime"></p>
+                </div>
+                <div>
+                  <h5 class="price">Price:</h6>
+                  <p id="price"></p>
+                </div>
               </div>
             </div>
           </div>
-  
+  </div>
           <div class="formbold-form-step-3">
             <div class="formbold-form-confirm">
               <h4 class="mx-auto">
@@ -232,16 +250,20 @@
       </form>
     </div>
   </div>
-
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- footer -->
+  <footer class="footer bg-black small text-center text-white-50">
+    <div class="container px-4 px-lg-5">Copyright &copy; Your Website 2022</div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnA__D7we39j6KjrIAvAnff9Kj5PicuhE&libraries=places"></script>
     <script src="public/js/maps.js"></script>
+    <script src="public/js/nav.js"></script>
     <script src="public/js/form.js"></script>
+    <script src="public/js/location.js"></script>
 
 
   </body>

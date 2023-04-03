@@ -1,89 +1,26 @@
 
-const lis = document.querySelectorAll("li");
-const lbs = document.querySelectorAll(".lb");
-const ul = document.querySelector("ul");
-const lineDash = document.querySelector(".line-dash");
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Get the select element by its id
+//   const serviceSelect = document.getElementById('form');
 
+//   // Add a change event listener to the select element
+//   serviceSelect.addEventListener('change', function() {
+//     // Get the selected value
+//     const selectedValue = this.value;
 
-var dashOrigin = -283; //pixels
-var selectedLi = -283; //pixels
-var speed = 500; //move this many pixels in one second.
-var distance = 0;
-var time = 0;
+//     // Log the selected value
+//     console.log('Selected value:', selectedValue);
+//     if(selectedValue === '3'){
+//       console.log(55);
+//     } else{
+//       console.log('ya broke');
+//     }
+//   });
+// });
 
-// initial animation and class for HOME
-TweenLite.to(lbs[1], 0.6, {
-					y: -43,
-					ease: Bounce.easeOut,
-					delay: 1
-				});
-
-lis[1].classList.add("active");
-
-//push all the bottom lines down.
-function pushDownLb() {
-	for(let k = 0; k < lbs.length; ++k)
-		TweenLite.to(lbs[k], 0.5, {
-					y: 0,
-					ease:  Power3.easeOut
-				});
-}
-
-ul.addEventListener(
-	"mouseleave",
-	function(e) {
-		// to avoid a bug in chrome that sometimes triggers mouseleave on click
-		// and the relatedTarget comes up null
-		if (e.relatedTarget) {
-			distance = Math.abs(dashOrigin - selectedLi);
-			time = distance / speed;
-			dashOrigin = selectedLi;
-			if (time) {
-				// overlaping tweens would give a zero time
-				TweenLite.to(lineDash, time, {
-					strokeDashoffset: selectedLi,
-					ease: Bounce.easeOut
-				});
-			} //if
-		} //if
-	},
-	false
-);
-
-for (let i = 0; i < 4; ++i) {
-	lis[i].addEventListener("mouseover", function() {
-		distance = Math.abs(-250 * i - 35 - dashOrigin);
-		time = distance / speed;
-		dashOrigin = -250 * i - 35;
-		if (time) {
-			TweenLite.to(lineDash, time, {
-				strokeDashoffset: -250 * i - 35,
-				ease: Bounce.easeOut
-			});
-		} //if
-	});
-
-	lis[i].addEventListener("click", function() {
-		selectedLi = -250 * i - 35;
-		pushDownLb();
-		let current = document.getElementsByClassName("active");
-		current[0].classList.remove("active");
-		lis[i].classList.add("active");
-		TweenLite.to(lbs[i], 0.5, {
-					y: -43,
-					ease: Bounce.easeOut
-				});
-	});
-}
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-if(menuBtn){
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
-}
 function validateForm() {
-  
+  const serviceSelect = document.getElementById('form').value;
+  console.log(serviceSelect);
     const firstName = document.querySelector('#first-name').value.trim();
     const lastName = document.querySelector('#last-name').value.trim();
     const email = document.querySelector('#email').value.trim();
@@ -96,7 +33,6 @@ function validateForm() {
     const specialRequests = document.querySelector('#special-requests').value.trim();
     const submit = document.getElementById('submit');
     const errorMessages = [];
-  console.log(firstName);
     if (!firstName) {
         errorMessages.push('First name is required');
         const firstName = document.querySelector('#first-name');
@@ -176,6 +112,14 @@ function validateForm() {
         const dropOff = document.querySelector('#drop-off')
         dropOff.classList = "form-control is-valid";
     }
+    if (serviceSelect === 'Select Service') {
+      errorMessages.push('Drop off location is required');
+      const serviceSelect = document.getElementById('form');
+      serviceSelect.classList = "form-control is-invalid"
+  } else{
+    const serviceSelect = document.getElementById('form');
+      serviceSelect.classList = "form-control is-valid";
+  }
 
 
     if (!passengers) {
@@ -203,7 +147,7 @@ function validateForm() {
 
 function isValidEmail(email) {
     // This regular expression checks if an email is valid
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regex = /.+@.+\..+/;
     return regex.test(email);
 }
 
@@ -315,13 +259,14 @@ function sendemail(){
     const firstName = document.querySelector('#first-name').value.trim();
     const lastName = document.querySelector('#last-name').value.trim();
     const useremail = document.querySelector('#email').value.trim();
-    const phone = document.querySelector('#phone').value.trim();
+    const phone = document.querySelector('#phone').value;
     const time = document.querySelector('#appointment-time').value.trim();
     const date = document.querySelector('#appointment-date').value.trim();
     const pickUp = document.querySelector('#pick-up').value.trim();
     const dropOff = document.querySelector('#drop-off').value.trim();
     const passengers = document.querySelector('#passengers').value.trim();
     const specialRequests = document.querySelector('#special-requests').value.trim();
+
     // appointmentTimeInput.addEventListener('input', (event) => {
     //     const timeValue = event.target.value;
     //     const [hours, minutes] = timeValue.split(':');

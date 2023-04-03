@@ -12,8 +12,21 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
+        background-image: url('https://wallpapercave.com/wp/wp4676574.jpg') ;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-    
+
+#navbtn{
+  background-color:#6A64F1;
+  ;
+  filter: blur(2);
+}
+    .navbar img {
+      width: 50px;
+      border-radius: 100%;
+    }
     .header {
         width: 100%;
         height: 75px;
@@ -41,15 +54,15 @@
         flex-direction: column;
         background-color: #9387ab;
     }
-    h1 {
+    /* h1 {
         letter-spacing: 4px;
         padding: 1em;
         color: white;
         background-color: rgb(0, 0, 34);
         opacity: 0.8;
-    }
+    } */
     
-    svg.line-top {
+    /* svg.line-top {
         width: 100%;
         background-color: transparent;
     }
@@ -110,7 +123,7 @@
             height: calc(100% - 64px);
         }
     }
-    /* end of nav bar */
+    end of nav bar */
     .post{
       padding:25px;
     }
@@ -120,7 +133,15 @@
       justify-content: center;
       padding: 48px;
     }
-
+    .pickupgroup{
+      display: flex;
+    }
+    #loader{
+      display: none;
+    }
+#locationButton{
+  cursor: pointer;
+}
 .formmap{
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +164,7 @@
     display: none;
 } 
 .mapcontext  ul li {
-	margin: 0;
+	margin: 6px;
 	padding: 10px 0 10px 0;
 	width: 25%;
 	height: 10px;
@@ -155,6 +176,24 @@
 	display: inline-block;
 	letter-spacing: 3.5px;
 	transition: all 0.5s ease-out;
+}
+@media (max-width: 400px) {
+    .rideestimates{
+        padding: 0px;
+        font-size: 7px;
+    }
+
+.formbold-form-confirm h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+}
+.estimateBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .content {
@@ -359,7 +398,7 @@
     .phonenum:hover{
         color: rgb(0, 0, 0);
     }
-    .formbold-form-confirm {
+    /* .formbold-form-confirm {
         background-color: #f7f7f7;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -367,14 +406,14 @@
         margin: 20px;
         padding: 20px;
         text-align: left;
-      }
+      } */
       
-      .formbold-form-confirm h4 {
+      /* .formbold-form-confirm h4 {
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 20px;
         text-align: center;
-      }
+      } */
       
       .phonenum {
         color: #007bff;
@@ -415,4 +454,11 @@
 .navwords {
     display: none;
 }
+}
+.footer {
+  padding: 5rem 0;
+  position: relative;
+  bottom: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255,0,0,0) 0%, rgb(0, 0, 0)60%) !important;
 }
