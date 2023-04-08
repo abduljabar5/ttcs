@@ -13,7 +13,7 @@
 //     initializeAutocomplete(input);
 //   });
 
-
+window.nameosa="jnvjksdnvjkdnvkjlsnlfdnjvds"
 function initMap() {
   const bounds = new google.maps.LatLngBounds();
   const markersArray = [];
@@ -71,6 +71,7 @@ function initMap() {
     // );
     // get distance matrix response
     console.log(request);
+    
     service.getDistanceMatrix(request).then((response) => {
       // put response
       const distance = document.getElementById('distance');
@@ -104,70 +105,71 @@ function initMap() {
       // service price change starts here??//
       ////////////////////////////////////////
       //////////////////////////////////////
-    
-  // Get the select element by its id
-  document.getElementById('form').addEventListener('change', function() {
-  // Add a change event listener to the select element
-    const serviceSelect = document.getElementById('form').value;
 
-  if(serviceSelect === '1'){
-console.log("taxi fair");
-let fair = 48;
-      if (actualDistance < 12) {
-        price.textContent = "$ " + fair
-        confirmprice.textContent = "$ " + fair
-        console.log(actualDistance);
-      } else {
-        fair += ((actualDistance - 12) * 4.6);
-        console.log(fair);
-        function roundDownToTwo(num) {
-          return Math.floor(num * 100) / 100;
+      // Get the select element by its id
+      document.getElementById('form').addEventListener('change', function () {
+        function isFeetOrMiles(value) {
+          // Convert the input value to a string to check for the unit
+          const valueString = String(value).toLowerCase();
+
+          // Check if the value contains 'ft' or 'mi'
+          if (valueString.includes('mi')) {
+            return true;
+          } else {
+            return false;
+          }
         }
-        let roundedFair = roundDownToTwo(fair)
-        console.log(roundedFair);
-        price.textContent = "$ " + roundedFair.toString();
-        confirmprice.textContent = "$" + (parseFloat(response.rows[0].elements[0].distance.text) * 5);
-      }
+        // Add a change event listener to the select element
 
-  } else if (serviceSelect ==='3' ){
-    console.log("limo fair");
-    let fair = 55;
-    if (actualDistance < 12) {
-      price.textContent = "$ " + fair
-      confirmprice.textContent = "$ " + fair
-      console.log(actualDistance);
-    } else {
-      fair += ((actualDistance - 12) * 5);
-      console.log(fair);
-      price.textContent = "$ " + fair.toString();
-      confirmprice.textContent = "$" + (parseFloat(response.rows[0].elements[0].distance.text) * 5);
-    }
-  } else {
-    console.log(serviceSelect);
+        const serviceSelect = document.getElementById('form').value;
+        if (isFeetOrMiles(response.rows[0].elements[0].distance.text)) {
+          console.log(response.rows[0].elements[0].distance.text);
+          if (serviceSelect === '1') {
+            console.log("taxi fair");
+            let fair = 48;
+            if (actualDistance < 10) {
+              price.textContent = "$ " + fair
+              confirmprice.textContent = "$ " + fair
+              console.log(actualDistance);
+            } else {
+              fair += ((actualDistance - 10) * 3.85);
+              console.log(fair);
+              function roundDownToTwo(num) {
+                return Math.floor(num * 100) / 100;
+              }
+              let roundedFair = roundDownToTwo(fair)
+              console.log(roundedFair);
+              price.textContent = "$ " + roundedFair.toString();
+              confirmprice.textContent = "$ " + roundedFair.toString();
+            }
 
-  }})
-      
-      
-        function to12Hour(time) {
-          let [h, m] = time.split(':').map(Number);
-          return `${((h + 11) % 12) + 1}:${m.toString().padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'}`;
+          } else if (serviceSelect === '3') {
+            console.log("limo fair");
+            let fair = 55;
+            if (actualDistance < 10) {
+              price.textContent = "$ " + fair
+              confirmprice.textContent = "$ " + fair
+              console.log(actualDistance);
+            } else {
+              fair += ((actualDistance - 10) * 5);
+              console.log(fair);
+              price.textContent = "$ " + fair.toString();
+              window.sharedData = "$ ";
+              confirmprice.textContent = "$ " + fair.toString();
+            }
+          } else {
+            console.log(serviceSelect);
+
+          }
+        } else {
+          console.log(response.rows[0].elements[0].distance.text);
+
+          alert("Distance too short");
+          window.location.reload();
         }
-      
+      })
       travletime.textContent = response.rows[0].elements[0].duration.text
-      confirmdate.textContent = " " + date
-        confirmtime.textContent = " " + to12Hour(time)
-      
-      confirmpickup.textContent = " " + pickUp
-      confirmdropoff.textContent = " " + dropOff
       confirmlength.textContent = " " + response.rows[0].elements[0].duration.text
-      confirmpassengers.textContent = " " + passengers
-      confirmspecial.textContent = " " + specialRequests
-      //   document.getElementById("response").innerText = JSON.stringify(
-      //     response,
-      //     null,
-      //     2
-      //   );
-
       // show on map
 
       const originList = response.originAddresses;
@@ -205,39 +207,6 @@ let fair = 48;
     }, 2000);
   });
 }
-function to12Hour(event) {
-  let [h, m] = event.split(':').map(Number);
-  return `${((h + 11) % 12) + 1}:${m.toString().padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'}`;
-}
-const firstName = document.querySelector('#first-name').value.trim();
-const lastName = document.querySelector('#last-name').value.trim();
-const useremail = document.querySelector('#email').value.trim();
-const phone = document.querySelector('#phone').value.trim();
-const time = document.querySelector('#appointment-time').value.trim();
-const date = document.querySelector('#appointment-date').value.trim();
-const pickUp = document.querySelector('#pick-up').value.trim();
-const dropOff = document.querySelector('#drop-off').value.trim();
-const passengers = document.querySelector('#passengers').value.trim();
-const specialRequests = document.querySelector('#special-requests').value.trim();
-const confirmdate = document.getElementById('confirmdate')
-const confirmtime = document.getElementById('confirmtime');
-const confirmpickup = document.getElementById('confirmpickup');
-const confirmdropoff = document.getElementById('confirmdropoff');
-const confirmlength = document.getElementById('confirmlength');
-const confirmprice = document.getElementById('confirmprice');
-const confirmpassengers = document.getElementById('confirmpassengers');
-const confirmspecial = document.getElementById('confirmspecial');
-      confirmdate.textContent = " " + date
-      if (time.value) {
-                confirmtime.textContent = " " + to12Hour(time)
-
-      }
-      
-      confirmpickup.textContent = " " + pickUp
-      confirmdropoff.textContent = " " + dropOff
-      confirmpassengers.textContent = " " + passengers
-      confirmspecial.textContent = " " + specialRequests
-
 function deleteMarkers(markersArray) {
   for (let i = 0; i < markersArray.length; i++) {
     markersArray[i].setMap(null);

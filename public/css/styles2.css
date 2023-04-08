@@ -288,7 +288,9 @@ z-index: 1020;
 .card-body {
   margin-top: 20px;
 }
-
+#submitButton{
+  height: 100%;
+}
 label {
   display: block;
   font-weight: bold;

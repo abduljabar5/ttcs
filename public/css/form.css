@@ -12,7 +12,7 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        background-image: url('https://wallpapercave.com/wp/wp4676574.jpg') ;
+        background-image: url('https://4kwallpapers.com/images/wallpapers/minneapolis-minnesota-usa-cityscape-city-lights-skyline-3840x2160-4608.jpg') ;
         
         background-repeat: no-repeat;
         background-size: cover;
@@ -41,7 +41,10 @@
         z-index: 32;
         
     }
-    
+    textarea {
+      border: 1px solid #888; 
+      resize: none;
+    }
     
     .content {
         width: 100%;
@@ -341,12 +344,14 @@
   
     .formbold-form-step-1,
     .formbold-form-step-2,
-    .formbold-form-step-3 {
+    .formbold-form-step-3,
+    .formbold-form-step-4 {
       display: none;
     }
     .formbold-form-step-1.active,
     .formbold-form-step-2.active,
-    .formbold-form-step-3.active {
+    .formbold-form-step-3.active,
+    .formbold-form-step-4.active {
       display: block;
     }
   
@@ -398,6 +403,7 @@
     .phonenum:hover{
         color: rgb(0, 0, 0);
     }
+   
     /* .formbold-form-confirm {
         background-color: #f7f7f7;
         border: 1px solid #ccc;
@@ -456,9 +462,9 @@
 }
 }
 .footer {
-  padding: 5rem 0;
-  position: relative;
-  bottom: 100%;
   width: 100%;
   background: linear-gradient(to bottom, rgba(255,0,0,0) 0%, rgb(0, 0, 0)60%) !important;
+}
+.min-vh-100 {
+  min-height: 100vh;
 }

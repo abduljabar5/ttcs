@@ -1,4 +1,5 @@
 
+
 const navbar = document.querySelector('.navbar');
 const textcolor = document.getElementById('textcolor');
 window.addEventListener('scroll', () => {
