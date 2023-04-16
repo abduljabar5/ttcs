@@ -1,8 +1,6 @@
 const reviewsList = document.getElementById('reviews-list');
 
 function addReview(name, rating, comment) {
-    console.log("hi save");
-    console.log(name, rating, comment);
   const newReview = document.createElement('section');
   newReview.classList.add('review');
 
@@ -27,19 +25,11 @@ function addReview(name, rating, comment) {
   reviewsList.prepend(newReview);
 
   // Save the review locally
- 
-}
-const submitreview = document.getElementById('submitreview');
-  submitreview.addEventListener("click", function newReview () {
-    const name = document.getElementById('name').value;
-    const rating = document.getElementById('rating').value;
-    const comment = document.getElementById('comment').value;
-    console.log(name, rating, comment);
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-     reviews.push({ name, rating, comment });
+  const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+  reviews.push({ name, rating, comment });
   localStorage.setItem('reviews', JSON.stringify(reviews));
-  document.location.replace('reviews.html')
-  })
+}
+
 function displayReviews() {
   const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
   reviews.forEach((review) => {
@@ -53,23 +43,23 @@ displayReviews();
 const commentForm = document.querySelector('form');
 commentForm.addEventListener('submit', function(event) {
   event.preventDefault();
-//   const name = document.getElementById('name').value;
-//   const rating = document.getElementById('rating').value;
-//   const comment = document.getElementById('comment').value;
-//   console.log(name, rating, comment);
-//   addReview(name, rating, comment);
-
-  alert(`Thank you for submitting your review of Thomson Team Car Service! Your feedback is important to us.
-
-  Please note that your review will be added to our site once it has been processed. This typically takes up to 48 hours, but can take longer in some cases.
-
-  We appreciate your patience and understanding, and look forward to sharing your thoughts with our community of customers.
-
-  Thank you again for choosing Thomson Team Car Service for your transportation needs!
-  `);
-
+  const name = document.getElementById('name').value;
+  const rating = document.getElementById('rating').value;
+  const comment = document.getElementById('comment').value;
+  addReview(name, rating, comment);
   commentForm.reset();
 });
 
-
- 
+const submitreview = document.getElementById('submitreview');
+submitreview.addEventListener("click", function () {
+  if (commentForm.checkValidity()) {
+    const name = document.getElementById('name').value;
+    const rating = document.getElementById('rating').value;
+    const comment = document.getElementById('comment').value;
+    addReview(name, rating, comment);
+window.location.reload();
+    commentForm.reset();
+  } else {
+    commentForm.reportValidity();
+  }
+});

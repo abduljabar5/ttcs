@@ -70,7 +70,6 @@ function initMap() {
     //   2
     // );
     // get distance matrix response
-    console.log(request);
     
     service.getDistanceMatrix(request).then((response) => {
       // put response
@@ -97,8 +96,6 @@ function initMap() {
       const confirmpassengers = document.getElementById('confirmpassengers');
       const confirmspecial = document.getElementById('confirmspecial');
       //  moooooooooooomooooooooooon//
-      console.log(response);
-      console.log(parseFloat(response.rows[0].elements[0].distance.text) * 5);
       mapcontexts.style.display = "block";
       distance.textContent = response.rows[0].elements[0].distance.text
       const actualDistance = parseFloat(response.rows[0].elements[0].distance.text)
@@ -123,46 +120,36 @@ function initMap() {
 
         const serviceSelect = document.getElementById('form').value;
         if (isFeetOrMiles(response.rows[0].elements[0].distance.text)) {
-          console.log(response.rows[0].elements[0].distance.text);
           if (serviceSelect === '1') {
-            console.log("taxi fair");
             let fair = 48;
             if (actualDistance < 10) {
               price.textContent = "$ " + fair
               confirmprice.textContent = "$ " + fair
-              console.log(actualDistance);
             } else {
               fair += ((actualDistance - 10) * 3.85);
-              console.log(fair);
               function roundDownToTwo(num) {
                 return Math.floor(num * 100) / 100;
               }
               let roundedFair = roundDownToTwo(fair)
-              console.log(roundedFair);
               price.textContent = "$ " + roundedFair.toString();
               confirmprice.textContent = "$ " + roundedFair.toString();
             }
 
           } else if (serviceSelect === '3') {
-            console.log("limo fair");
             let fair = 55;
             if (actualDistance < 10) {
               price.textContent = "$ " + fair
               confirmprice.textContent = "$ " + fair
-              console.log(actualDistance);
             } else {
               fair += ((actualDistance - 10) * 5);
-              console.log(fair);
               price.textContent = "$ " + fair.toString();
               window.sharedData = "$ ";
               confirmprice.textContent = "$ " + fair.toString();
             }
           } else {
-            console.log(serviceSelect);
 
           }
         } else {
-          console.log(response.rows[0].elements[0].distance.text);
 
           alert("Distance too short");
           window.location.reload();

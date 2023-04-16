@@ -1,26 +1,6 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Get the select element by its id
-  const serviceSelect = document.getElementById('form');
-
-  // Add a change event listener to the select element
-  serviceSelect.addEventListener('change', function() {
-    // Get the selected value
-    const selectedValue = this.value;
-
-    // Log the selected value
-    console.log('Selected value:', selectedValue);
-    if(selectedValue === '3'){
-      console.log(55);
-    } else{
-      console.log('ya broke');
-    }
-  });
-});
-
 function validateForm() {
   const serviceSelect = document.getElementById('form').value;
-  console.log(serviceSelect);
     const firstName = document.querySelector('#first-name').value.trim();
     const lastName = document.querySelector('#last-name').value.trim();
     const email = document.querySelector('#email').value.trim();
@@ -190,7 +170,6 @@ const formSubmitBtn = document.getElementById('formSubmitBtn')
 const formBackBtn = document.querySelector('.formbold-back-btn')
 formSubmitBtn.addEventListener("click", function(event){
   event.preventDefault()
-  console.log("yep");
   validateForm();
   
 })
@@ -216,7 +195,6 @@ function next(event) {
 
         formBackBtn.classList.remove('active')
         document.getElementById('form').value = 'Select Service'
-        console.log("im going back");
         if(stepMenuThree.className == 'formbold-step-menu3 active') {
           stepMenuTwo.classList.add('active')
           stepMenuThree.classList.remove('active')
@@ -295,7 +273,6 @@ function  submitForm(){
 if (submit) {
   submit.addEventListener("click",function(event){
      event.preventDefault();
-     console.log("jo");
     //  
 //  validateForm();
 
@@ -345,16 +322,14 @@ const formattedPhoneNumber = reformatPhoneNumber(phone);
     //     const formattedTime = `${formattedHours}:${minutes} ${period}`;
     //     event.target.value = formattedTime;
     //   });
-    console.log("hi email is being sent to client")
-    console.log(newPrice);
     Email.send({
      
             Host : "smtp.elasticemail.com",
             Username : "gymhomies1234@gmail.com",
             Password : "5BACC0A66B18ECD81D1D1CAF56C951AE2C6F",
             To : `${useremail}`,
-            From : `gymhomies1234@gmail.com`,
-            Subject : 'Thomson Team Car Service',
+            From : `totaltowncarservice@gmail.com`,
+            Subject : 'Total Town Car Service',
             Body : `<!DOCTYPE html>
             <html>
               <head>
@@ -425,9 +400,9 @@ const formattedPhoneNumber = reformatPhoneNumber(phone);
                     <br>
                     We are delighted to confirm your upcoming car ride with Thomson Team Car Service, the premier car service in town. Our team of professional chauffeurs is dedicated to providing you with a luxurious and comfortable ride to your destination.
                     <br>
-                    At Thomson Team Car Service, we pride ourselves on offering the highest quality of service and exceeding our clients' expectations. We are committed to making your experience with us as smooth and enjoyable as possible.
+                    At Total Town Car Service, we pride ourselves on offering the highest quality of service and exceeding our clients' expectations. We are committed to making your experience with us as smooth and enjoyable as possible.
                     <br>
-                    Thank you for choosing Thomson Team Car Service for your transportation needs. We look forward to serving you and providing you with an exceptional experience.</p>
+                    Thank you for choosing Total Town Car Service for your transportation needs. We look forward to serving you and providing you with an exceptional experience.</p>
                   <table>
                     <tr>
                       <th>Date</th>
@@ -467,9 +442,9 @@ const formattedPhoneNumber = reformatPhoneNumber(phone);
                 // <div class="button-container">
                 //   <a href="tel:(612)-999-5382" class="button">(612) 999-5382</a>
                 // </div>
-                <p>Thank you for choosing Thomson Team Car Service. We look forward to providing you with a top-notch car ride experience.</p>
+                <p>Thank you for choosing Total Town Team Car Service. We look forward to providing you with a top-notch car ride experience.</p>
                 <p>Best regards,</p>
-                <p>The Thomson Team Car Service Team</p>
+                <p>The Total Town Car Service Team</p>
               </div>
               
             `
@@ -479,12 +454,11 @@ const formattedPhoneNumber = reformatPhoneNumber(phone);
           // document.location.replace('index.html')
           
         );
-        console.log("email sent to me");
         Email.send({
             Host : "smtp.elasticemail.com",
             Username : "gymhomies1234@gmail.com",
             Password : "5BACC0A66B18ECD81D1D1CAF56C951AE2C6F",
-            To : [`yamopiw217@fectode.com`,`abduljabar.nur.5@gmail.com`],
+            To : [`totaltowncarservice@gmail.com`,`abduljabar.nur.5@gmail.com`],
             From : `gymhomies1234@gmail.com`,
             Subject : `Order from ${firstName} ${lastName}`,
             Body : `<!DOCTYPE html>
