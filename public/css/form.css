@@ -12,8 +12,7 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        background-image: url('https://4kwallpapers.com/images/wallpapers/minneapolis-minnesota-usa-cityscape-city-lights-skyline-3840x2160-4608.jpg') ;
-        
+        background-image: url('images/formbgpicture.jpg') ;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -127,6 +126,7 @@
         }
     }
     end of nav bar */
+ 
     .post{
       padding:25px;
     }

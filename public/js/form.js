@@ -215,6 +215,18 @@ function next(event) {
         stepTwo.classList.remove('active')
 
         formBackBtn.classList.remove('active')
+        document.getElementById('form').value = 'Select Service'
+        console.log("im going back");
+        if(stepMenuThree.className == 'formbold-step-menu3 active') {
+          stepMenuTwo.classList.add('active')
+          stepMenuThree.classList.remove('active')
+    
+          stepTwo.classList.add('active')
+          stepThree.classList.remove('active')
+    
+          // formBackBtn.classList.remove('active')
+          formSubmitBtn.textContent = "Next"
+        }
 
       })
 
@@ -252,7 +264,7 @@ function next(event) {
       stepTwo.classList.remove('active')
       stepThree.classList.add('active')
 
-      formBackBtn.classList.remove('active')
+      // formBackBtn.classList.remove('active')
       formSubmitBtn.textContent = "Submit"
       // document.getElementById('nextbtn').style.display = "none";
       // document.getElementById('submit').style.display = "block";
