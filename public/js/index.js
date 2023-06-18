@@ -96,7 +96,6 @@ menuBtn.addEventListener('click', () => {
     const specialRequests = document.querySelector('#special-requests').value.trim();
     const submit = document.getElementById('submit');
     const errorMessages = [];
-  console.log(firstName);
     if (!firstName) {
         errorMessages.push('First name is required');
         const firstName = document.querySelector('#first-name');
@@ -243,7 +242,6 @@ function  submitForm(){
 
 submit.addEventListener("click",function(event){
      event.preventDefault();
-     console.log("jo");
     //  submitForm();
  validateForm();
 

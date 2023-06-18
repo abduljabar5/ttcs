@@ -47,6 +47,13 @@ padding: 20px;
 margin-bottom: 20px;
 border-radius: 20px;
 }
+.new-reviewer{
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #888;
+}
 .review h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -66,7 +73,7 @@ border-radius: 20px;
     
     .stars {
     font-size: 24px;
-    color: #ffc107;
+    color: #ffd700;
     margin-right: 10px;
     }
     
