@@ -255,7 +255,7 @@ function next(event) {
       stepFour.classList.add('active')
       document.getElementById('formsteps').style.display = "none";
       formSubmitBtn.style.display="none";
-      // formBackBtn.classList.add('active')
+      formBackBtn.classList.remove('active')
        sendemail();
     } 
 
