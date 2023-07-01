@@ -21,7 +21,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="https://static.vecteezy.com/system/resources/previews/009/121/835/non_2x/ttc-logo-ttc-letter-ttc-letter-logo-design-initials-ttc-logo-linked-with-circle-and-uppercase-monogram-logo-ttc-typography-for-technology-business-and-real-estate-brand-vector.jpg" alt=""></a>
+        <a class="navbar-brand" href="index.html"><img src="https://static.vecteezy.com/system/resources/previews/009/121/835/non_2x/ttc-logo-ttc-letter-ttc-letter-logo-design-initials-ttc-logo-linked-with-circle-and-uppercase-monogram-logo-ttc-typography-for-technology-business-and-real-estate-brand-vector.jpg" alt=""></a>
         <button class="navbar-toggler" id="navbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
         aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation">
         <!-- <img src="public/css/images/6137866_format_remove_tab_text_edit_icon.svg" alt=""> -->
@@ -33,13 +33,13 @@
               <a class="nav-link text-light" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light active" id="nav" href="form.html">Book Now</a>
+              <a class="nav-link text-light" id="nav" href="form.html">Book Now</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="pricing.html">Pricing</a>
+              <a class="nav-link text-light active" href="pricing.html">Estimate</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light " href="reviews.html">Reviews</a>
@@ -57,9 +57,9 @@
   <div class="navbar-nav">
     <a class="nav-link text-center active" aria-current="page" href="index.html">Home</a>
     <a class="nav-link text-center" href="form.html">Book Now</a>
-      <div class="custom-separator mx-auto bg-primary"></div>
     <a class="nav-link text-center" href="about.html">About Us</a>
-    <a class="nav-link text-center" href="pricing.html">Pricing</a>
+    <a class="nav-link text-center" href="pricing.html">Estimate</a>
+      <div class="custom-separator mx-auto bg-primary"></div>
     <a class="nav-link text-center" href="reviews.html">Reviews</a>
 </div>
 </div>
@@ -74,21 +74,21 @@
               <ul>
                   <li class="formbold-step-menu1 active">
                       <span class="num">1</span>
-                     <span class="navwords">Book Now</span> 
+                     <span class="navwords">Address</span> 
                   </li>
                   <li class="formbold-step-menu2">
                       <span class="num">2</span>
-                     <span class="navwords">Get Estimates</span> 
+                     <span class="navwords">Estimate</span> 
                   </li>
-                  <li class="formbold-step-menu3">
+                  <!-- <li class="formbold-step-menu3">
                       <span class="num">3</span>
                       <span class="navwords">Confirmation</span> 
-                  </li>
+                  </li> -->
               </ul>
           </div>
   
           <div class="formbold-form-step-1 active">
-            <div class="formbold-input-flex">
+            <!-- <div class="formbold-input-flex">
               <div>
                 <input class="firstname form-control" type="text" id="first-name" name="first-name"  placeholder="First Name" required >
               </div>
@@ -113,7 +113,7 @@
           <div>
             <input class="form-control" type="date" id="appointment-date" name="appointment-date" placeholder="Date"required>
             </div>
-          </div>
+          </div> -->
           <div class="formbold-input-flex">
           <div class="pickupgroup">
             <input  type="text" class="autocomplete form-control" list="datalistOptions"  placeholder="Enter an address" id="pick-up" name="pick-up" required>
@@ -155,15 +155,15 @@
 </select>
 
 </div>
-<div>
+<!-- <div>
         <textarea class="form-control" placeholder="Special Requests" id="special-requests" name="special-requests"></textarea>
-</div>
+</div> -->
 </div>
           <div class="formbold-form-step-2">
             <div class="mapcontainer mx-auto">
               <div id="map"></div>
               <div  class="mapcontext text-center" id="mapcontexts">
-                <h1>Ride Estimates</h1>
+                <h1>Ride Estimate</h1>
                 <div class="estimateBox">
                 <div class="text-center rideestimates" style="padding: 0px;">
                   <h5 class="distance">Distance:</h6>
@@ -242,18 +242,31 @@
             </button>
   
             <button class="formbold-btn formbtn" id="formSubmitBtn">
-                Next
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1675_1807)">
-                <path d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z" fill="white"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_1675_1807">
-                <rect width="16" height="16" fill="white"/>
-                </clipPath>
-                </defs>
-                </svg>
-            </button>
+              Next
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1675_1807)">
+              <path d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1675_1807">
+              <rect width="16" height="16" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+          </button>
+          <a role="button" class="formbold-btn formbtn" id="Book-now" style="display: none;" href="form.html">
+            Book Now
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1675_1807)">
+            <path d="M10.7814 7.33312L7.20541 3.75712L8.14808 2.81445L13.3334 7.99979L8.14808 13.1851L7.20541 12.2425L10.7814 8.66645H2.66675V7.33312H10.7814Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1675_1807">
+            <rect width="16" height="16" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+        </a>
             <button  class="btn btn-outline-dark" id="submtit" value="Submtit" style="display: none;">Submit</button>
           </div>
       </form>

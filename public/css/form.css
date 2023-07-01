@@ -464,6 +464,7 @@
 .footer {
   width: 100%;
   background: linear-gradient(to bottom, rgba(255,0,0,0) 0%, rgb(0, 0, 0)60%) !important;
+  height: 70px;
 }
 .min-vh-100 {
   min-height: 100vh;
