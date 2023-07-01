@@ -72,10 +72,12 @@
 <script src="https://cdn01.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.43092" type="text/javascript"></script>
 <script defer src="https://cdn02.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.43092" type="text/javascript"></script>
 <script defer src="https://cdn03.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.43092" type="text/javascript"></script>
-<script src="https://cdn01.jotfor.ms/js/payments/validategateways.js?v=3.3.43092" type="text/javascript"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://cdn01.jotfor.ms/js/payments/payment_form_embedded.js?v=3.3.43092" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/js/payments/validategateways.js?v=3.3.43092" type="text/javascript"></script>
 <script src="https://cdn01.jotfor.ms/s/umd/d6378480e53/for-widgets-server.js?v=3.3.43092" type="text/javascript"></script>
 <script src="https://cdn01.jotfor.ms/s/umd/d6378480e53/for-appointment-field.js?v=3.3.43092" type="text/javascript"></script>
-<script src="https://cdn02.jotfor.ms/js/vendor/math-processor.js?v=3.3.43092" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/math-processor.js?v=3.3.43092" type="text/javascript"></script>
 <script type="text/javascript">	JotForm.newDefaultTheme = true;
 	JotForm.extendsNewTheme = false;
 	JotForm.singleProduct = false;
@@ -103,9 +105,9 @@
 	/*INIT-END*/
 	});
 
-   JotForm.prepareCalculationsOnTheFly([null,{"name":"totalTown","qid":"1","text":"Total Town Car Service","type":"control_head"},null,null,{"name":"email","qid":"4","subLabel":"","text":"Email","type":"control_email"},{"name":"phoneNumber","qid":"5","text":"Phone Number","type":"control_phone"},null,null,null,null,null,null,null,null,null,{"name":"name","qid":"15","text":"Name","type":"control_fullname"},null,null,null,null,null,null,{"name":"appointment","qid":"22","text":"Appointment","type":"control_appointment"},{"name":"typeA","qid":"23","text":"Address","type":"control_widget"},{"name":"pageBreak","qid":"24","text":"Page Break","type":"control_pagebreak"},null,null,null,null,null,null,null,{"description":"","name":"calculation","qid":"32","subLabel":"","text":"Price","type":"control_calculation"},null,null,null,null,{"description":"","name":"passengers","qid":"37","subLabel":"","text":"Passengers","type":"control_spinner"},{"description":"","name":"numberOf38","qid":"38","subLabel":"","text":"Luggage","type":"control_spinner"},null,null,null,null,null,null,null,null,null,{"name":"submit","qid":"48","text":"Submit","type":"control_button"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"divider","qid":"69","text":"Divider","type":"control_divider"},null,null,null,null,null,null,null,null,null,null,{"name":"totalTown80","qid":"80","text":"Total Town Car Service","type":"control_head"}]);
+   JotForm.prepareCalculationsOnTheFly([null,{"name":"totalTown","qid":"1","text":"Total Town Car Service","type":"control_head"},null,null,{"name":"email","qid":"4","subLabel":"","text":"Email","type":"control_email"},{"name":"phoneNumber","qid":"5","text":"Phone Number","type":"control_phone"},null,null,null,null,null,null,null,null,null,{"name":"name","qid":"15","text":"Name","type":"control_fullname"},null,null,null,null,null,null,{"name":"appointment","qid":"22","text":"Appointment","type":"control_appointment"},{"name":"typeA","qid":"23","text":"Address","type":"control_widget"},{"name":"pageBreak","qid":"24","text":"Page Break","type":"control_pagebreak"},null,null,null,null,null,null,null,{"description":"","name":"calculation","qid":"32","subLabel":"","text":"Price","type":"control_calculation"},null,null,null,null,{"description":"","name":"passengers","qid":"37","subLabel":"","text":"Passengers","type":"control_spinner"},{"description":"","name":"numberOf38","qid":"38","subLabel":"","text":"Luggage","type":"control_spinner"},null,null,null,null,null,null,null,null,null,{"name":"submit","qid":"48","text":"Payment","type":"control_button"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"divider","qid":"69","text":"Divider","type":"control_divider"},null,null,null,null,null,null,null,null,null,null,{"name":"totalTown80","qid":"80","text":"Total Town Car Service","type":"control_head"},{"name":"pageBreak81","qid":"81","text":"Page Break","type":"control_pagebreak"},null,{"description":"","name":"fair","qid":"83","text":"Fair","type":"control_stripeCheckout"}]);
    setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,{"name":"totalTown","qid":"1","text":"Total Town Car Service","type":"control_head"},null,null,{"name":"email","qid":"4","subLabel":"","text":"Email","type":"control_email"},{"name":"phoneNumber","qid":"5","text":"Phone Number","type":"control_phone"},null,null,null,null,null,null,null,null,null,{"name":"name","qid":"15","text":"Name","type":"control_fullname"},null,null,null,null,null,null,{"name":"appointment","qid":"22","text":"Appointment","type":"control_appointment"},{"name":"typeA","qid":"23","text":"Address","type":"control_widget"},{"name":"pageBreak","qid":"24","text":"Page Break","type":"control_pagebreak"},null,null,null,null,null,null,null,{"description":"","name":"calculation","qid":"32","subLabel":"","text":"Price","type":"control_calculation"},null,null,null,null,{"description":"","name":"passengers","qid":"37","subLabel":"","text":"Passengers","type":"control_spinner"},{"description":"","name":"numberOf38","qid":"38","subLabel":"","text":"Luggage","type":"control_spinner"},null,null,null,null,null,null,null,null,null,{"name":"submit","qid":"48","text":"Submit","type":"control_button"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"divider","qid":"69","text":"Divider","type":"control_divider"},null,null,null,null,null,null,null,null,null,null,{"name":"totalTown80","qid":"80","text":"Total Town Car Service","type":"control_head"}]);}, 20); 
+JotForm.paymentExtrasOnTheFly([null,{"name":"totalTown","qid":"1","text":"Total Town Car Service","type":"control_head"},null,null,{"name":"email","qid":"4","subLabel":"","text":"Email","type":"control_email"},{"name":"phoneNumber","qid":"5","text":"Phone Number","type":"control_phone"},null,null,null,null,null,null,null,null,null,{"name":"name","qid":"15","text":"Name","type":"control_fullname"},null,null,null,null,null,null,{"name":"appointment","qid":"22","text":"Appointment","type":"control_appointment"},{"name":"typeA","qid":"23","text":"Address","type":"control_widget"},{"name":"pageBreak","qid":"24","text":"Page Break","type":"control_pagebreak"},null,null,null,null,null,null,null,{"description":"","name":"calculation","qid":"32","subLabel":"","text":"Price","type":"control_calculation"},null,null,null,null,{"description":"","name":"passengers","qid":"37","subLabel":"","text":"Passengers","type":"control_spinner"},{"description":"","name":"numberOf38","qid":"38","subLabel":"","text":"Luggage","type":"control_spinner"},null,null,null,null,null,null,null,null,null,{"name":"submit","qid":"48","text":"Payment","type":"control_button"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"divider","qid":"69","text":"Divider","type":"control_divider"},null,null,null,null,null,null,null,null,null,null,{"name":"totalTown80","qid":"80","text":"Total Town Car Service","type":"control_head"},{"name":"pageBreak81","qid":"81","text":"Page Break","type":"control_pagebreak"},null,{"description":"","name":"fair","qid":"83","text":"Fair","type":"control_stripeCheckout"}]);}, 20); 
 </script>
 <style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
 <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.43092&themeRevisionID=5eb3b4ae85bd2e1e2966db96"/>
@@ -900,12 +902,31 @@ span.FITB-inptCont[data-type=radiobox] label,
           </div>
         </div>
       </li>
-      <li class="form-line form-line-column form-col-1" data-type="control_calculation" id="id_32"><label class="form-label form-label-top" id="label_32" for="input_32"> Price </label>
-        <div id="cid_32" class="form-input-wide" data-layout="half"> <input type="text" data-component="calculation" data-defaultvalue="0" class="form-textbox" data-type="input-textbox" id="input_32" name="q32_calculation" value="0" size="20" /> </div>
+      <li class="form-line form-line-column form-col-1 always-hidden" data-type="control_calculation" id="id_32"><label class="form-label form-label-top" id="label_32" for="input_32"> Price </label>
+        <div id="cid_32" class="form-input-wide always-hidden" data-layout="half"> <input type="text" data-component="calculation" data-defaultvalue="0" class="form-textbox" data-type="input-textbox" id="input_32" name="q32_calculation" value="0" size="20" /> </div>
+      </li>
+      <li id="cid_81" class="form-input-wide" data-type="control_pagebreak">
+        <div class="form-pagebreak" data-component="pagebreak">
+          <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_81" type="button" class="form-pagebreak-back  form-submit-button-gradient-28 jf-form-buttons" data-component="pagebreak-back">Back</button></div>
+          <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_81" type="button" class="form-pagebreak-next  form-submit-button-gradient-28 jf-form-buttons" data-component="pagebreak-next">Next</button></div>
+          <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_81"></div>
+        </div>
+      </li>
+    </ul>
+    <ul class="form-section page-section" style="display:none;">
+      <li class="form-line jf-required" data-type="control_stripeCheckout" id="id_83" data-payment="true"><label class="form-label form-label-top" id="label_83" for="input_83"> Fair<span class="form-required">*</span> </label>
+        <div id="cid_83" class="form-input-wide jf-required" data-layout="full">
+          <div data-wrapper-react="true">
+            <div data-wrapper-react="true" class="product-container-wrapper">
+              <div class="filter-container"></div><input type="hidden" name="simple_fpc" data-payment_type="stripeCheckout" data-component="payment1" value="83" /><input type="hidden" name="payment_transaction_uuid" id="paymentTransactionId" /><input type="hidden" name="payment_total_checksum" id="payment_total_checksum" data-component="payment2" />
+              <div id="image-overlay" class="overlay-content" style="display:none"><img id="current-image" /><span class="lb-prev-button">prev</span><span class="lb-next-button">next</span><span class="lb-close-button">( X )</span><span class="image-overlay-product-container"></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[required, Numeric]" id="input_83_donation" name="q83_fair[price]" value="" readonly="" data-custom-amount-field="32" data-component="paymentDonation" aria-labelledby="label_83" /><span class="donation_currency">USD</span><label class="form-sub-label" for="input_83_donation" style="min-height:13px" aria-hidden="false">Description</label></span>
+            </div>
+          </div>
+        </div>
       </li>
       <li class="form-line" data-type="control_button" id="id_48">
         <div id="cid_48" class="form-input-wide" data-layout="full">
-          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_48" type="submit" class="form-submit-button form-submit-button-gradient-28 submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button></div>
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_48" type="submit" class="form-submit-button form-submit-button-gradient-28 submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Payment</button></div>
         </div>
       </li>
       <li style="clear:both"></li>
@@ -926,17 +947,7 @@ span.FITB-inptCont[data-type=radiobox] label,
     }
   </script>
   <div class="formFooter-heightMask"></div>
-  <div class="formFooter f6 branding21" style="display: flex!important; opacity: 1!important; visibility: visible!important;">
-    <!-- <div class="formFooter-wrapper formFooter-leftSide">
-      <a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=231755178705159&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink">
-        <img class="formFooter-logo" src="https://cdn.jotfor.ms/assets/img/logo2021/jotform-logo-white.svg" alt="Jotform Logo" style="height: 44px;">
-      </a>
-    </div>
-    <div class="formFooter-wrapper formFooter-rightSide">
-      <span class="formFooter-text">Now create your own Jotform - It's free!</span>
-      <a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=231755178705159&utm_content=jotform_button&utm_campaign=powered_by_jotform_le" target="_blank">Create your own Jotform</a>
-    </div> -->
-  </div>
+ 
 </form><script type="text/javascript">JotForm.ownerView=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.43092"></script>
 <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.43092"></script>
   <!-- footer -->
