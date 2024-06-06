@@ -1,79 +1,556 @@
 body{
-    background-color: #292929;
+  background-color: #292929;
 }
 #navbarNav{
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 .navbar img {
-    width: 50px;
-    border-radius: 100%;
-  }
+  width: 100px;
+  border-radius: 100%;
+}
 .nav-item{
-    margin-right: 20px;
-    transition: .5s;
-    border-radius: 30px;
+  margin-right: 20px;
+  transition: .5s;
+  border-radius: 30px;
 }
 .nav-item a{
-    border-radius: 30px;
-    padding: 5px 20px !important;
-    /* color: #fff !important; */
-    font-size: 16px;
-    margin-right: 10px;
-    text-decoration: none !important;
-    text-align: center;
-    margin-right: auto!important;
-    margin-left: auto!important;
-    
+  border-radius: 30px;
+  padding: 5px 20px !important;
+  /* color: #fff !important; */
+  font-size: 16px;
+  margin-right: 10px;
+  text-decoration: none !important;
+  text-align: center;
+  margin-right: auto!important;
+  margin-left: auto!important;
+  
+}
+.nav-item a:hover {
+color: #fff;
 }
 .nav-item:hover{
- 
- background-color: #2a2a2a;
- color: rgb(255, 255, 255);
+
+background-color: #2a2a2a;
+color: rgb(255, 255, 255);
 }
-            
+          
 .bgc{
-    background-color:#50817e ;
+  background-color:#50817e ;
 }
 .navbar{
-    background-color: transparent;
-    transition: 1s ;}
+  background-color: transparent;
+  transition: 1s ;}
 .navbar.scrolled {
-    /* background: linear-gradient(60deg, #50817E 0%, #313131 40%, #313131 61%, #50817E 100%); */
-  background-color: rgb(0, 0, 0); 
-   opacity: .8;
-  top: 0;
-  z-index: 1020;
-  }
-  .custom-separator {
-    width: 5rem;
-    height: 6px;
-    border-radius: 1rem;
-    float: left;
-    margin-left: 15px;
-  }
-  /* #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+  /* background: linear-gradient(60deg, #50817E 0%, #313131 40%, #313131 61%, #50817E 100%); */
+background-color: rgb(0, 0, 0); 
+ opacity: .8;
+top: 0;
+z-index: 1020;
+}
+.navbar.scrolled .nav-item a {
+  color: #fff;
+}
+.custom-separator {
+  width: 5rem;
+  height: 6px;
+  border-radius: 1rem;
+  float: left;
+  margin-left: 15px;
+}
+/* #preloader {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 8);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 9999;
 }
 
 .loader {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 2s linear infinite;
+border: 8px solid #f3f3f3;
+border-top: 8px solid #3498db;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
 } */
+
+/* Hero Banner  */
+.hero-banner {
+position: relative;
+height: 300px;
+background-image: url('./images/Ridealong-Car-Rental-Background-Image-004.jpg');
+background-size: cover;
+background-position: center;
+text-align: center;
+}
+
+.hero-banner .overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #fff;
+opacity: unset;
+}
+
+.overlay h2 {
+font-size: 36px;
+margin: 0;
+color: #fff;
+}
+
+@media (max-width: 768px) {
+.hero-banner {
+    height: 200px;
+}
+
+.overlay h2 {
+    font-size: 24px;
+}
+}
+.about-section, .additional-section {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 40px;
+margin-top: 50px;
+padding: 10px 30px 30px 10px;
+}
+@media (max-width:767px) {
+.about-section   {
+  flex-direction: column-reverse;
+  padding: 40px 20px;
+  align-items: unset;
+}
+.additional-section {
+  flex-direction: column;
+  padding: 40px 20px;
+  align-items: unset;
+}
+}
+
+.about-section .about-image, .additional-section .additional-image-container {
+flex: 1;
+text-align: center;
+}
+
+
+.about-section .about-image img, .additional-section .additional-image-container img {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 20px;
+}
+
+
+.about-section .about-content, .additional-section .additional-content-container {
+flex: 1;
+text-align: justify;
+padding-right: 20px;
+padding-left: 20px;
+}
+
+.about-content h2 {
+color: #333;
+border-bottom: 1px solid #333;
+padding-bottom: 10px;
+}
+.about-content button.btn {
+background-color: #50817e;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.about-content button.btn:hover {
+background-color: #11abce;
+}
+
+
+/* Existing CSS styles */
+
+.team-section {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin-bottom: 40px;
+max-width: 100%;
+}
+@media (max-width:767px) {
+.team-member {
+  width: 100% !important;
+}
+}
+
+.team-member {
+text-align: center;
+margin: 20px;
+width: 30%;
+}
+
+.team-member img {
+border-radius: 50%;
+width: 200px;
+height: 200px;
+object-fit: cover;
+}
+
+.team-member h2 {
+margin: 10px 0;
+}
+
+.team-member p {
+color: #666;
+}
+
+
+/* Existing CSS styles */
+
+.locations-section {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+margin-bottom: 40px;
+}
+
+.map-container {
+flex: 1;
+margin-right: 20px;
+}
+
+.locations-list {
+flex: 1;
+}
+
+.locations-list h2 {
+color: #333;
+border-bottom: 1px solid #333;
+padding-bottom: 10px;
+}
+
+.locations-list ul {
+list-style-type: none;
+padding: 0;
+}
+
+.locations-list ul li {
+color: #666;
+margin: 10px 0;
+}
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.gallery-h2 {
+color: #fff;
+text-align: center;
+font-family: 'Great Vibes';
+font-size: 45px;
+padding: 30px 0 30px 0;
+}
+.image {
+position: relative;
+margin: 10px;
+overflow: hidden;
+width: 300px;
+height: 200px;
+}
+
+.image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+opacity: 0;
+transition: opacity 0.3s ease;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.overlay:hover {
+opacity: 1;
+}
+
+.text {
+font-size: 20px;
+}
+.locations {
+background-color: #000000eb !important;
+padding: 100px 30px;
+}
+/* subscribe */
+.signup-section {
+padding: 10rem 0;
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-size: cover;
+}
+.signup-section .form-signup input {
+box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+padding: 1.25rem 2rem;
+height: auto;
+font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+font-size: 80%;
+text-transform: uppercase;
+letter-spacing: 0.15rem;
+border: 0;
+}
+
+.contact-section {
+padding-top: 5rem;
+}
+.contact-section .card {
+border: 0;
+border-bottom: 0.25rem solid #64a19d;
+}
+.contact-section .card h4, .contact-section .card .h4 {
+font-size: 0.8rem;
+font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+text-transform: uppercase;
+letter-spacing: 0.15rem;
+}
+.contact-section .card hr {
+border-color: #64a19d;
+border-width: 0.25rem;
+width: 3rem;
+}
+.contact-section .social {
+margin-top: 5rem;
+}
+.contact-section .social a {
+text-align: center;
+height: 3rem;
+width: 3rem;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 100%;
+line-height: 3rem;
+color: rgba(255, 255, 255, 0.3);
+}
+.contact-section .social a:hover {
+color: rgba(255, 255, 255, 0.5);
+}
+.contact-section .social a:active {
+color: #fff;
+}
+
+.footer {
+padding: 5rem 0;
+}
+#subscribe {
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1.6)), url(https://w0.peakpx.com/wallpaper/388/579/HD-wallpaper-modern-architecture-skyscrapers-business-centers-modern-buildings.jpg) fixed center center;
+background-size: cover;
+padding: 80px 0;
+/* margin-bottom: 160px; */
+margin-top: 160px;
+}
+
+#subscribe .subscribe-title {
+color: #fff;
+font-size: 28px;
+font-weight: 700;
+}
+
+#subscribe .subscribe-text {
+color: #fff;
+}
+
+#subscribe .subscribe-btn-container {
+text-align: center;
+padding-top: 20px;
+}
+
+#subscribe .subscribe-btn {
+font-family: "Raleway", sans-serif;
+text-transform: uppercase;
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 1px;
+display: inline-block;
+padding: 8px 20px;
+border-radius: 2px;
+transition: 0.5s;
+margin: 10px;
+border: 2px solid #fff;
+color: #fff;
+}
+
+#subscribe .subscribe-btn:hover {
+background: #03C4EB;
+border: 2px solid #03C4EB;
+}
+.video{
+width: 100%;
+}
+.video-container {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 50rem;
+font-family: 'Gruppo', "cursive";
+
+}
+
+.video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.video-container a {
+text-decoration: none;
+/* color: #64a19d; */
+}
+
+.booksection {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+background: #000000c2;
+padding: 40px;
+}
+.cardform {
+position: relative;
+background-color: #ffffff;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+padding: 20px;
+width: 80%;
+max-width: 600px;
+margin: auto;
+margin-top: auto;
+}
+
+.card-body {
+margin-top: 20px;
+}
+#submitButton{
+height: 100%;
+}
+.footer {
+padding: 3rem 0;
+background-color: #000 !important;
+}
+
+.mission-vision {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+@media (max-width : 767px) {
+.mission-vision {
+  flex-direction: column;
+}
+}
+.mission-vision-item {
+flex-basis: 45%;
+padding: 20px;
+background-color: #f9f9f9;
+margin-bottom: 20px;
+}
+
+.mission-vision-item img {
+max-width: 200px;
+height: auto;
+margin-bottom: 10px;
+}
+
+.carousel-container {
+width: 70%;
+margin: auto;
+overflow: hidden;
+position: relative;
+}
+
+.carousel-slide {
+display: flex;
+transition: transform 0.5s ease;
+}
+
+.review {
+flex: 0 0 100%;
+padding: 20px;
+text-align: center;
+}
+
+.review img {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-bottom: 10px;
+}
+
+.review h3 {
+margin-top: 0;
+font-size: 18px;
+}
+
+.review p {
+margin-bottom: 10px;
+font-size: 16px;
+}
+.review-section {
+padding: 50px 20px 50px 20px;
+}
+.review .rating {
+color: #f8c828;
+font-size: 18px;
+justify-content: center;
+}
+
+.carousel-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+padding: 10px;
+border: none;
+outline: none;
+z-index: 1;
+}
+
+.prev {
+left: 0;
+}
+
+.next {
+right: 0;
+}
+.about-p p{
+padding: 0 50px 50px;
+}
+
+.sticky-top .navbar-toggler {
+background-color: #fff !important;
+}
