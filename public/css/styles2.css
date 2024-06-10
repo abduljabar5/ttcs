@@ -57,10 +57,7 @@ z-index: 1020;
   width: 50px;
   border-radius: 100%;
 }
-.navbar .navbar-toggler img {
-  width: 50px;
-  color: #fff;
-}
+
 .masthead {
   position: relative;
   width: 100%;
@@ -204,7 +201,7 @@ z-index: 1020;
   padding: 5rem 0;
 }
 #subscribe {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1.6)), url("./images/side-view-man-working-as-valet.jpg") fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://w0.peakpx.com/wallpaper/388/579/HD-wallpaper-modern-architecture-skyscrapers-business-centers-modern-buildings.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
   /* margin-bottom: 160px; */
@@ -275,8 +272,6 @@ z-index: 1020;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  background: #000000c2;
-  padding: 40px;
 }
 .cardform {
   position: relative;
@@ -308,25 +303,12 @@ label {
   align-items: center;
 
 }
-@media (max-width:767px) {
-  .specialize-container span {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
- }
-}
 .specialize-container img{
   width: 120px;
   margin-bottom: 35px;
 }
 .specialize-container p {
-  /* color: #50817e; */
-  color: #fff;
-  text-transform: capitalize;
-}
-.specialize-container span {
-  border: solid 1px #fff;
-  padding: 10px;
+  color: #50817e;
 }
 .mainbtn{
   grid-gap: 29px;
@@ -345,10 +327,6 @@ label {
   border-radius: 30px;
   margin: 15px;
 }
-.pricingcontainer .bg-white a{
-  display: flex;
-  justify-content: center;
-}
 
 .rounded-lg {
   border-radius: 1rem !important;
@@ -362,58 +340,4 @@ label {
 
 .text-uppercase {
   letter-spacing: 0.2em;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 50px;
-}
-.gallery-h2 {
-color: #fff;
-text-align: center;
-font-family: 'Great Vibes';
-font-size: 45px;
-padding: 30px 0 30px 0;
-}
-.image {
-  position: relative;
-  margin: 10px;
-  overflow: hidden;
-  width: 300px;
-  height: 200px;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overlay:hover {
-  opacity: 1;
-}
-
-.text {
-  font-size: 20px;
-}
-
-.scrolled .navbar-toggler {
-  background-color: #fff !important;
 }
